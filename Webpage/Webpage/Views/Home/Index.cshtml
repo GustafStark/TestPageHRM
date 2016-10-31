@@ -2,3 +2,79 @@
     ViewBag.Title = "Home Page";
 }
 
+<div class="parallax">
+    <div id="group1" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+
+            <img class="image-background" src="~/images/photo-1473873446975-123c5143248b.jpg" />
+            <div class="title">
+                <h1>HRM Engineering</h1>
+                <span>Teknik & Miljö i Samverkan</span>
+            </div>
+        </div>
+    </div>
+    <div class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+            <div class="title size-35">"HRM skall erbjuda ingenjörstjänster som ger uppdragsgivaren ett tekniskt och miljömässigt försprång gentemot sina konkurrenter."</div>
+        </div>
+        <div class="parallax__layer parallax__layer--back">
+            <img class="image-background" src="~/images/photo-1439123068749-20f4035bd7ed.jpg" />
+        </div>
+    </div>
+    <div id="group1" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+            <article class="col-lg-12">
+
+
+                @for (int i = 0; i < 6; i++)
+                {
+                    <article class="col-lg-4 col-md-6 col-xs-12 top-fifty">
+                        <article class="div-center">
+                            <h2>Title</h2>
+                            <img src="~/images/dsc_2937.jpg" class="img-circle " width="160" height="160" />
+                            <p>Small text for all things that need small text of small things in small objects</p>
+                            <p><strong>SmallThing</strong></p>
+                            <a href="#" type="button">content</a>
+                        </article>
+                    </article>
+                }
+            </article>
+        </div>
+    </div>
+    <div id="group2" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+            <div class="title size-35">Arbetsglädje. Kompetens. Tydlighet. De här tre orden är ryggraden i hur vi tänker på HRM. Det är den goda cirkeln som ger personlig utveckling och hållbar lönsamhet.</div>
+        </div>
+        <div class="parallax__layer parallax__layer--back">
+            <img class="image-background" src="~/images/photo-1422938522079-7f21c8b014f6.jpg" />
+        </div>
+    </div>
+    <div id="group1" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+
+            <div class="title">
+                Hos oss hittar du experter inom: <br />
+
+                Ljud och Vibrationer &nbsp; Mekanik  &nbsp;  Elektronik & mjukvaruutveckling <br /> Hybrid- & elfordon &nbsp; Miljö & kvalitet &nbsp; Utbildning
+            </div>
+        </div>
+        <a href="~/Views/Home/Contact.cshtml">~/Views/Home/Contact.cshtml</a>
+    </div>
+    <div id="group4" class="parallax__group">
+        <div class="parallax__layer parallax__layer--back">
+            <img class="image-background" src="~/images/photo-1474065581914-e24d783b0c55.jpg" />
+        </div>
+        <div class="parallax__layer parallax__layer--base">
+            <div class="title">
+                <h1>Hybrid och elfordon</h1>
+                <span>Ingen har väl kunnat undgå att el- och hybridbilar verkligen är på gång. Stora fordonstillverkare och nystartade nischföretag visar nu konceptfordon, prototyper och till och med produktionsbilar av både elfordon och hybridbilar.</span>
+            </div>
+        </div>
+    </div>
+    <div id="group1" class="parallax__group">
+        <div class="parallax__layer parallax__layer--base">
+
+            <span class="title size-35">Focus på framtidens teknik</span>
+        </div>
+    </div>
+</div>
