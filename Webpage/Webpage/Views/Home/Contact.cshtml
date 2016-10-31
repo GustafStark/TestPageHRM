@@ -2,16 +2,25 @@
     ViewBag.Title = "Contact";
 }
 <h2>@ViewBag.Title.</h2>
-<h3>@ViewBag.Message</h3>
+
+<form>
+    <label>Name</label>
+    <input name="name" placeholder="Type Here" />
+
+    <label>Email</label>
+    <input name="email" type="email" placeholder="Email" />
+
+    <label>Message</label>
+    <textarea name="message" placeholder="Type Here"></textarea>
+
+    <input type="submit" id="submit" name="submit" value="Submit" />
+</form>
+
 
 <address>
-    One Microsoft Way<br />
-    Redmond, WA 98052-6399<br />
+    HRM Engineering<br />
+    Eriksbergstorget 11<br />
     <abbr title="Phone">P:</abbr>
     425.555.0100
 </address>
 
-<address>
-    <strong>Support:</strong>   <a href="mailto:Support@example.com">Support@example.com</a><br />
-    <strong>Marketing:</strong> <a href="mailto:Marketing@example.com">Marketing@example.com</a>
-</address>

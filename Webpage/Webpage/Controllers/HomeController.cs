@@ -15,7 +15,7 @@ namespace Webpage.Controllers
 
         public ActionResult About()
         {
-            ViewBag.Message = "Your application description page.";
+            ViewBag.Message = "Inget vanligt konsultföretag";
 
             return View();
         }
@@ -26,5 +26,31 @@ namespace Webpage.Controllers
 
             return View();
         }
+        public ActionResult Expertise()
+        {
+            return View();
+        }
+        public ActionResult Ourwork()
+        {
+            return View();
+        }
+        public ActionResult Career()
+        {
+            return View();
+        }
+        //public static string ActionLinkWithImage(this HtmlHelper html,string imgSrc, string actionName)
+        //{
+        //    UrlHelper xUrlHelper = new UrlHelper(html.ViewContext.RequestContext);
+        //    string sImageUrl = xUrlHelper.Content(imgSrc);
+        //    TagBuilder xTagBuilder = new TagBuilder("img");
+        //    xTagBuilder.MergeAttribute("src", sImageUrl);
+        //    string sImage = xTagBuilder.ToString(TagRenderMode.Normal);
+        //    string sUrl = xUrlHelper.Action(actionName);
+
+        //    TagBuilder xTabBuilderSecound = new TagBuilder("a") { InnerHtml = sImage };
+        //    xTabBuilderSecound.MergeAttribute("href", sUrl);
+
+        //       return xTabBuilderSecound.ToString(TagRenderMode.Normal);
+        //}
     }
 }
