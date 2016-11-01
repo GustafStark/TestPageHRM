@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 C:\Users\hrmengineering\Documents\GitHub\TestPageHRM\Webpage\Webpage\bin\roslyn\csc.exe
 C:\Users\hrmengineering\Documents\GitHub\TestPageHRM\Webpage\Webpage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\hrmengineering\Documents\GitHub\TestPageHRM\Webpage\Webpage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
@@ -67,6 +68,8 @@ C:\Users\hrmengineering\Documents\GitHub\TestPageHRM\Webpage\Webpage\bin\Microso
 C:\Users\hrmengineering\Documents\GitHub\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.csprojResolveAssemblyReference.cache
 C:\Users\hrmengineering\Documents\GitHub\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.dll
 C:\Users\hrmengineering\Documents\GitHub\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.pdb
+=======
+>>>>>>> parent of 10d92e0... Test Added Hello World!
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\bin\roslyn\csc.exe
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\bin\roslyn\Microsoft.Build.Tasks.CodeAnalysis.dll
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\bin\roslyn\Microsoft.CodeAnalysis.CSharp.dll
