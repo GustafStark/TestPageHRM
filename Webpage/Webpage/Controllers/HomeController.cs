@@ -32,7 +32,12 @@ namespace Webpage.Controllers
         }
         public ActionResult Ourwork()
         {
-            return View();
+            var xImageFiles = new Webpage.Models.ImageModel();
+            //Place holder data!
+            xImageFiles.Images.Add("~/images/SlideShow/development.jpg");
+            xImageFiles.Images.Add("~/images/SlideShow/11086.jpg");
+            xImageFiles.Images.Add("~/images/SlideShow/EngineeringKids.jpg");
+            return View(xImageFiles);
         }
         public ActionResult Career()
         {

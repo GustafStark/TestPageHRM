@@ -1,8 +1,179 @@
-﻿
+﻿@model Webpage.Models.ImageModel
+
 @{
     ViewBag.Title = "Ourwork";
 }
 
-<h2>Ourwork</h2>
-Hello World!
+<div style="top:50px;">
+    @{
+        List<string> lxListOfItems = new List<string>();
+        foreach (var item in Model.m_lsImages)
+        {
+            lxListOfItems.Add(item);
+            @*<img class="full-image" src="@Url.Content(item)" alt="Alternate Text" />*@
+        }
+        <img class="full-image" src="@Url.Content(lxListOfItems[0])" alt="Alternate Text" />
+        @*<h5 class="Our-Work-Headline">
+                We help your company develop<br />
+                We work hard for you and your project
+            </h5>*@
+    }
+</div>
 
+@*<img src="@Test" />*@
+
+
+
+
+<div class="info-tiles">
+    <div class="info-tile-row">
+        <div class="info-tile">
+            <a href="https://livingservices.fjordnet.com/">
+                <img class="tile-img-dt" src="https://www.fjordnet.com/media-files/2012/12/LS-image-website-frontpage.png">
+                <img class="tile-img-mb" src="https://www.fjordnet.com/media-files/2012/12/LS-image-website-frontpage.png">
+                <div class="info-tile-info">
+                    <div class="info-tile-info-inner">
+                        <p class="top-text">Title</p><h3>Title</h3>
+                        <p class="bottom-text">Text</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="info-tile">
+            <a href="https://www.fjordnet.com/about-us/what-we-do/fjord-evolution/">
+                <img class="tile-img-dt" src="https://www.fjordnet.com/media-files/2012/12/tile2_l.jpg">
+                <img class="tile-img-mb" src="https://www.fjordnet.com/media-files/2012/12/tile2_xs.jpg">
+                <div class="info-tile-info">
+                    <div class="info-tile-info-inner">
+                        <p class="top-text">Fjord Evolution</p><h3>Curious by nature</h3>
+                        <p class="bottom-text">Our approach to learning</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div class="info-tile-row">
+        <div class="info-tile">
+            <a href="https://www.fjordnet.com/workdetail/a-north-star-for-better-customer-experience/">
+                <img class="tile-img-dt" src="https://www.fjordnet.com/media-files/2012/12/finnair.jpg">
+                <img class="tile-img-mb" src="https://www.fjordnet.com/media-files/2012/12/finnair-copy.jpg">
+                <div class="info-tile-info">
+                    <div class="info-tile-info-inner">
+                        <p class="top-text">Our work with Finnair</p><h3>A North Star for better customer experience</h3>
+                        <p class="bottom-text">Have a look</p>
+                    </div>
+                </div>
+            </a>
+        </div>
+        <div class="info-tile">
+            <div class="info-inner-tile">
+                <div class="info-inner-inner-tile">
+                    <a href="https://www.fjordnet.com/conversations/the-symbiosis-of-nature-and-business-fjordjourneys-goes-to-canada/">
+                        <img class="tile-img-dt" src="https://www.fjordnet.com/media-files/2012/12/Journey-front-page-web.jpg">
+                        <img class="tile-img-mb" src="https://www.fjordnet.com/media-files/2012/12/Journey-front-page.jpg">
+                        <div class="info-tile-info">
+                            <div class="info-tile-info-inner">
+                                <p class="top-text">the experience of a lifetime</p>
+                                <h3>Fjord Journeys</h3><p class="bottom-text">
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="info-inner-inner-tile">
+                    <a href="https://www.fjordnet.com/conversations/the-symbiosis-of-nature-and-business-fjordjourneys-goes-to-canada/">
+                        <img class="tile-img-dt" src="https://www.fjordnet.com/media-files/2012/12/Journey-front-page-web.jpg">
+                        <img class="tile-img-mb" src="https://www.fjordnet.com/media-files/2012/12/Journey-front-page.jpg">
+                        <div class="info-tile-info">
+                            <div class="info-tile-info-inner">
+                                <p class="top-text">the experience of a lifetime</p>
+                                <h3>Fjord Journeys</h3><p class="bottom-text">
+                                </p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+            <div class="info-inner-tile">
+                <a href="https://www.fjordnet.com/conversations/can-corporate-and-creative-cultures-ever-truly-merge/">
+                    <img class="tile-img-dt" src="https://www.fjordnet.com/media-files/2012/12/EQUINOX-01_800x400.jpg">
+                    <img class="tile-img-mb" src="https://www.fjordnet.com/media-files/2012/12/EQUINOX-01_640x220_B.jpg">
+                    <div class="info-tile-info">
+                        <div class="info-tile-info-inner">
+                            <p class="top-text">Conversations</p>
+                            <h3>Fast Company</h3>
+                            <p class="bottom-text">A merging of cultures</p>
+                        </div>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+    <div class="info-tile-row">
+        <div class="info-tile">
+            <div class="info-inner-tile">
+                <div class="info-inner-inner-tile">
+                    <a href="/workdetail/make-the-world-work-better/">
+                        <img class="tile-img-dt" src="https://www.fjordnet.com/media-files/2015/10/Fjord-Fido-LP_1_400x400.jpg">
+                        <img class="tile-img-mb" src="https://www.fjordnet.com/media-files/2015/10/Fjord-Fido-LP_1_640x220.jpg">
+                        <div class="info-tile-info">
+                            <div class="info-tile-info-inner">
+                                <p class="top-text">Fjord Fido</p>
+                                <h3>Make the world work better</h3>
+                                <p class="bottom-text">The diabetes care platform</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="info-inner-inner-tile">
+                    <a href="/workdetail/make-the-world-work-better/">
+                        <img class="tile-img-dt" src="https://www.fjordnet.com/media-files/2015/10/Fjord-Fido-LP_1_400x400.jpg">
+                        <img class="tile-img-mb" src="https://www.fjordnet.com/media-files/2015/10/Fjord-Fido-LP_1_640x220.jpg">
+                        <div class="info-tile-info">
+                            <div class="info-tile-info-inner">
+                                <p class="top-text">Fjord Fido</p>
+                                <h3>Make the world work better</h3>
+                                <p class="bottom-text">The diabetes care platform</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="info-tile">
+            <div class="info-inner-tile">
+                <div class="info-inner-inner-tile">
+                    <a href="/careers/">
+                        <img class="tile-img-dt" src="https://www.fjordnet.com/media-files/2012/12/tile7_l.jpg">
+                        <img class="tile-img-mb" src="https://www.fjordnet.com/media-files/2012/12/tile7_xs.jpg">
+                        <div class="info-tile-info">
+                            <div class="info-tile-info-inner">
+                                <p class="top-text">Careers</p>
+                                <h3>It’s good to be a Fjordian</h3>
+                                <p class="bottom-text">Join the team</p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="info-inner-inner-tile">
+                    <a href="https://www.fjordnet.com/about-us/studios/">
+                        <img class="tile-img-dt" src="https://www.fjordnet.com/media-files/2012/12/Invision-tile-7-desktop-1.png">
+                        <img class="tile-img-mb" src="https://www.fjordnet.com/media-files/2012/12/Invision-tile-7-mobile-1.png">
+                        <div class="info-tile-info">
+                            <div class="info-tile-info-inner">
+                                <p class="top-text">hello!</p>
+                                <h3>Visit our studios</h3>
+                                <p class="bottom-text"></p>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+@*Facebook
+    Twitter
+    Instagram*@

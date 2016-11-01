@@ -175,6 +175,7 @@
     </Compile>
     <Compile Include="Models\AccountViewModels.cs" />
     <Compile Include="Models\IdentityModels.cs" />
+    <Compile Include="Models\ImageModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
@@ -186,18 +187,31 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\Ourwork\cartech.jpg" />
+    <Content Include="images\Ourwork\car_photo_532210.jpg" />
+    <Content Include="images\Ourwork\iStock_000016593653Large.jpg" />
+    <Content Include="images\Ourwork\maxresdefault.jpg" />
+    <Content Include="images\Ourwork\myfordtouch-sg.jpg" />
+    <Content Include="images\Ourwork\P90150028-highRes-820x420.jpg" />
+    <Content Include="images\Ourwork\wallpaper-widescreen-car-tech-197362.jpg" />
+    <Content Include="images\SlideShow\11086.jpg" />
     <Content Include="images\147742353398194 %284%29.gif" />
     <Content Include="images\1946860.JPG" />
     <Content Include="images\39982a21.jpg" />
     <Content Include="images\7VRjBuoQRG6b0U7sIqjk_ConstructionNight_wide2.jpg" />
+    <Content Include="images\SlideShow\development.jpg" />
     <Content Include="images\DSC0649.jpg" />
     <Content Include="images\dsc_2937.jpg" />
+    <Content Include="images\SlideShow\EngineeringKids.jpg" />
+    <Content Include="images\engineering-pictures-12.jpg" />
     <Content Include="images\HRMParts\hrm-topp-ljud-vibr.jpg" />
     <Content Include="images\HRMParts\hrm-utbildning-topp.jpg" />
     <Content Include="images\HRMParts\hrm_toppbild_anders_magnusson_svensk.jpg" />
     <Content Include="images\HRMParts\hrm_toppbild_fredrik_hybrid_sv.jpg" />
     <Content Include="images\HRMParts\web-top-mekanik.jpg" />
     <Content Include="images\HRMParts\_hrm-toppbild-cecilia-ny.jpg" />
+    <Content Include="images\image-research-development.jpg" />
+    <Content Include="images\images.jpg" />
     <Content Include="images\IMGP6130_redigerad-1.jpg" />
     <Content Include="images\Logo.gif" />
     <Content Include="images\photo-1422938522079-7f21c8b014f6.jpg" />
@@ -206,6 +220,7 @@
     <Content Include="images\photo-1450542814732-e210d1b7b938.jpg" />
     <Content Include="images\photo-1473873446975-123c5143248b.jpg" />
     <Content Include="images\photo-1474065581914-e24d783b0c55.jpg" />
+    <Content Include="images\The-battle-for-growth-human-capital-development-strategies.jpg" />
     <Content Include="Scripts\bootstrap.js" />
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\Gustaf - FTP.pubxml" />
