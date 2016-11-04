@@ -20,23 +20,44 @@
 
                 <a href="@Url.Action("Index","Home/Index")">
                     <img src="~/images/Logo.gif" />
-               </a>
+                </a>
                 @*@Html.ActionLink("[replacetext]", "Index", "Home").ToHtmlString().Replace("[replacetext]", "<img src=~/images/Logo.gif/>");*@
                 @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
 
             </div>
-            
+
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
-                    <li>@Html.ActionLink("Home", "Index", "Home")</li>
-                    <li>@Html.ActionLink("About", "About", "Home")</li>
-                
-                    <li>@Html.ActionLink("Expertise", "Expertise", "Home")</li>
-                    <li>@Html.ActionLink("Career", "Career", "Home")</li>
-                    <li>@Html.ActionLink("Ourwork", "Ourwork", "Home")</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home")</li>
+                    @*<li>@Html.ActionLink("Home", "Index", "Home",null,new { @style="font-size:16px;" })</li>*@
+                    <li>@Html.ActionLink("About", "About", "Home", null, new { @style = "font-size:16px;" })</li>
+
+                    <li>@Html.ActionLink("Expertise", "Expertise", "Home", null, new { @style = "font-size:16px;" })</li>
+                    <li>@Html.ActionLink("Career", "Career", "Home", null, new { @style = "font-size:16px;" })</li>
+                    <li>@Html.ActionLink("Ourwork", "Ourwork", "Home", null, new { @style = "font-size:16px;" })</li>
+                    <li>@Html.ActionLink("Contact", "Contact", "Home", null, new { @style = "font-size:16px;" })</li>
+                    @if (Context.User.Identity.IsAuthenticated)
+                    {
+                        <li class="dropdown">
+                            @*<a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                                <p style="font-size:16px">Administratör</p>
+                                <span class="caret"></span>
+                            </a>*@
+                            <p style="font-size:16px;color:darkgray;margin-top:22%;" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            Admin
+                            <span class="caret">
+                                
+                                </span> </p>
+                            <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+                                <li>@Html.ActionLink("Skapa Post", "Index", "Posts")</li>
+                                <li>@Html.ActionLink("Skapa annons", "Index", "JobOffers")</li>
+                                
+                              <li role="separator" class="divider"></li>
+                                <li>@Html.ActionLink("Register", "Register", "Account", null, new { @style = "font-size:16px;" })</li>
+                            </ul>
+                        </li>
+                    }
                 </ul>
-                @*        @Html.Partial("_LoginPartial")*@
+                @Html.Partial("_LoginPartial")
             </div>
         </div>
     </div>

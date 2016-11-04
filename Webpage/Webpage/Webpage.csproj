@@ -169,7 +169,16 @@
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\JobOffersController.cs" />
+    <Compile Include="Controllers\PostsController.cs" />
+    <Compile Include="Migrations\201611041317093_FirstTry.cs" />
+    <Compile Include="Migrations\201611041317093_FirstTry.Designer.cs">
+      <DependentUpon>201611041317093_FirstTry.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\JobOffers.cs" />
     <Compile Include="Controllers\ManageController.cs" />
+    <Compile Include="Models\Post.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -177,6 +186,7 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ImageModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\WebpageContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Startup.cs" />
   </ItemGroup>
@@ -200,8 +210,6 @@
     <Content Include="images\39982a21.jpg" />
     <Content Include="images\7VRjBuoQRG6b0U7sIqjk_ConstructionNight_wide2.jpg" />
     <Content Include="images\SlideShow\development.jpg" />
-    <Content Include="images\DSC0649.jpg" />
-    <Content Include="images\dsc_2937.jpg" />
     <Content Include="images\SlideShow\EngineeringKids.jpg" />
     <Content Include="images\engineering-pictures-12.jpg" />
     <Content Include="images\HRMParts\hrm-topp-ljud-vibr.jpg" />
@@ -212,7 +220,6 @@
     <Content Include="images\HRMParts\_hrm-toppbild-cecilia-ny.jpg" />
     <Content Include="images\image-research-development.jpg" />
     <Content Include="images\images.jpg" />
-    <Content Include="images\IMGP6130_redigerad-1.jpg" />
     <Content Include="images\Logo.gif" />
     <Content Include="images\photo-1422938522079-7f21c8b014f6.jpg" />
     <Content Include="images\photo-1439123068749-20f4035bd7ed.jpg" />
@@ -274,6 +281,16 @@
     <Content Include="Views\Home\Expertise.cshtml" />
     <Content Include="Views\Home\Career.cshtml" />
     <Content Include="Views\Home\Ourwork.cshtml" />
+    <Content Include="Views\Posts\Create.cshtml" />
+    <Content Include="Views\Posts\Delete.cshtml" />
+    <Content Include="Views\Posts\Details.cshtml" />
+    <Content Include="Views\Posts\Edit.cshtml" />
+    <Content Include="Views\Posts\Index.cshtml" />
+    <Content Include="Views\JobOffers\Create.cshtml" />
+    <Content Include="Views\JobOffers\Delete.cshtml" />
+    <Content Include="Views\JobOffers\Details.cshtml" />
+    <Content Include="Views\JobOffers\Edit.cshtml" />
+    <Content Include="Views\JobOffers\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -285,6 +302,11 @@
     <Content Include="packages.config" />
     <None Include="Project_Readme.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
+  </ItemGroup>
+  <ItemGroup>
+    <EmbeddedResource Include="Migrations\201611041317093_FirstTry.resx">
+      <DependentUpon>201611041317093_FirstTry.cs</DependentUpon>
+    </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>

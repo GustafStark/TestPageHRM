@@ -7,4 +7,13 @@
   <parameter name="DefaultConnection-Web.config Connection String" description="" value="Data Source=(LocalDb)\MSSQLLocalDB;AttachDbFilename=|DataDirectory|\aspnet-Webpage-20161031091008.mdf;Initial Catalog=aspnet-Webpage-20161031091008;Integrated Security=True" tags="">
     <parameterEntry kind="XmlFile" scope="C:\\Users\\hrm30\\Documents\\Visual\ Studio\ 2015\\Projects\\TestPageHRM\\Webpage\\Webpage\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='DefaultConnection']/@connectionString" />
   </parameter>
+  <parameter name="Webpage.Controllers.JobOffersDBContext-Web.config Connection String" description="" value="Webpage.Controllers.JobOffersDBContext_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\hrm30\\Documents\\Visual\ Studio\ 2015\\Projects\\TestPageHRM\\Webpage\\Webpage\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Webpage.Controllers.JobOffersDBContext']/@connectionString" />
+  </parameter>
+  <parameter name="Webpage.Controllers.PostDbContest-Web.config Connection String" description="" value="Webpage.Controllers.PostDbContest_ConnectionString" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\hrm30\\Documents\\Visual\ Studio\ 2015\\Projects\\TestPageHRM\\Webpage\\Webpage\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='Webpage.Controllers.PostDbContest']/@connectionString" />
+  </parameter>
+  <parameter name="WebpageContext-Web.config Connection String" description="" value="Data Source=(localdb)\MSSQLLocalDB; Initial Catalog=WebpageContext-20161104141316; Integrated Security=True; MultipleActiveResultSets=True; AttachDbFilename=|DataDirectory|WebpageContext-20161104141316.mdf" tags="">
+    <parameterEntry kind="XmlFile" scope="C:\\Users\\hrm30\\Documents\\Visual\ Studio\ 2015\\Projects\\TestPageHRM\\Webpage\\Webpage\\obj\\Release\\Package\\PackageTmp\\Web\.config$" match="/configuration/connectionStrings/add[@name='WebpageContext']/@connectionString" />
+  </parameter>
 </parameters>
