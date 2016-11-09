@@ -38,15 +38,11 @@
                     @if (Context.User.Identity.IsAuthenticated)
                     {
                         <li class="dropdown">
-                            @*<a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+                            <a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
                                 <p style="font-size:16px">Administratör</p>
                                 <span class="caret"></span>
-                            </a>*@
-                            <p style="font-size:16px;color:darkgray;margin-top:22%;" class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                            Admin
-                            <span class="caret">
-                                
-                                </span> </p>
+                            </a>
+                          
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
                                 <li>@Html.ActionLink("Skapa Post", "Index", "Posts")</li>
                                 <li>@Html.ActionLink("Skapa annons", "Index", "JobOffers")</li>

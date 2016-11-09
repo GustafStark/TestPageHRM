@@ -168,6 +168,7 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\DepartementController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobOffersController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
@@ -291,6 +292,13 @@
     <Content Include="Views\JobOffers\Details.cshtml" />
     <Content Include="Views\JobOffers\Edit.cshtml" />
     <Content Include="Views\JobOffers\Index.cshtml" />
+    <Content Include="Views\Departement\Mekanik.cshtml" />
+    <Content Include="Views\Departement\ElekMjuk.cshtml" />
+    <Content Include="Views\Departement\HybridElec.cshtml" />
+    <Content Include="Views\Departement\EnviormentQuality.cshtml" />
+    <Content Include="Views\Departement\Education.cshtml" />
+    <Content Include="Views\Departement\SoundAndEnviorment.cshtml" />
+    <Content Include="Views\Departement\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

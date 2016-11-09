@@ -168,7 +168,9 @@ textarea {
     top: 50%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    color: rgb(255, 106, 0);
+    color:beige;
+        text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+
     font-size: 200%;
 }
 
@@ -334,6 +336,9 @@ p {
 .text-color-white {
     color: whitesmoke;
 }
+.text-color-beige{
+    color:beige;
+}
 
 .text-color-black {
     color: black;
@@ -406,6 +411,10 @@ h3 {
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     font-size: 200%;
+    text-shadow: -1px 0 black,0 1px black, 1px 0 black, 0 -1px black;
+}
+p{
+    font-size:25px;
 }
 
 @media screen and (max-width: 768px) {
@@ -417,6 +426,10 @@ h3 {
     .text-color-gray {
         /*color:red;*/
     }
+    p{
+        font-size:18px;
+        font-weight:200;
+    }
 }
 
 @media screen and (max-width: 580px) {
@@ -424,8 +437,8 @@ h3 {
         /*color:pink;*/
     }
     h1{
-        font-weight:400;
-        font-size:50px;
+        font-weight:300;
+        font-size:40px;
     }
     .title{
         font-size:25px;
@@ -454,30 +467,7 @@ h3 {
     /*position:relative;*/
     width: 100%;
 }
-/*.Our-Work-Headline
-{
-    position:absolute;
-    top:200px;
-    left:0;
-    width:100%;
-}
-.Our-Work-Span{
-    color:darkgray;
-    font: bold 24px/45px Helvetica, Sans-Serif;
-    letter-spacing: -1px;
-    background:black;
-    background:rgba(0, 0, 0, 0.07);
-    padding:10px;
-}*/
-/*span{
-    text-align:center;
-    color:black;
-    font: bold 50px/100px Helvetica, Sans-Serif;
-    letter-spacing: -1px;
-    background:black;
-    background:rgba(0, 0, 0, 0.07);
-    padding:10px;
-}*/
+
 h5 {
     font: bold 50px/100px Helvetica, Sans-Serif;
     position: absolute;
@@ -1007,7 +997,10 @@ h1.twitter-header a {
 
 @media screen and (max-width: 767px) {
     .office-address span {
-        font-size: 16px !important;
+        font-size: 12px !important;
+    }
+    span {
+        font-size:2px;
     }
 }
 
@@ -1035,4 +1028,19 @@ h1.twitter-header a {
 
 .footer_inner_spacer .meta_pages a {
     font-size: 12px;
+}
+h4{
+    font-size:26px;
+    text-shadow: -1px 0 black, 0 1px black, 1px 0 black, 0 -1px black;
+    color:whitesmoke;
+}
+.title-career {
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    font-size: 200%;
+    text-shadow: -1px 0 black,0 1px black, 1px 0 black, 0 -1px black;
 }

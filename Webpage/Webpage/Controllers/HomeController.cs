@@ -58,5 +58,9 @@ namespace Webpage.Controllers
 
         //       return xTabBuilderSecound.ToString(TagRenderMode.Normal);
         //}
+        public ActionResult SoundAndEnviorment()
+        {
+            return View();
+        }
     }
 }
