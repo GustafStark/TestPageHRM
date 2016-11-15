@@ -14,6 +14,7 @@ namespace Webpage.Controllers
         public string Qualifications { get; set; }
         public string Email { get; set; }
 
+        public bool Visable { get; set; }
         public string Author { get; set; }
     }
     public class JobOffersDBContext : DbContext

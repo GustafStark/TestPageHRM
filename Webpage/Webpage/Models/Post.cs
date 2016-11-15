@@ -17,7 +17,7 @@ namespace Webpage.Controllers
         public string ShortText { get; set; }
         public string LongTest { get; set; }
 
-
+        public bool Visable { get; set; }
         public string Author { get; set; }
 
     }
