@@ -133,8 +133,13 @@ C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\bin\Microsoft.Owin.Security.Google.xml
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\bin\Microsoft.Owin.Security.Twitter.xml
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\bin\Microsoft.Owin.Security.MicrosoftAccount.xml
-C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.Migrations.FirstTry.resources
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.csproj.GenerateResource.Cache
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.dll
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.pdb
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.csprojResolveAssemblyReference.cache
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.Resources.HomeText.resources
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\bin\sv\Webpage.resources.dll
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.Resources.HomeText.sv.resources
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\sv\Webpage.resources.dll
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.Migrations.boo.resources
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.Migrations.boo1.resources

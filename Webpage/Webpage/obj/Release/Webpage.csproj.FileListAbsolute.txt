@@ -69,3 +69,7 @@ C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Release\Webpage.pdb
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Release\Webpage.Migrations.FirstTry.resources
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Release\Webpage.csproj.GenerateResource.Cache
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\bin\sv\Webpage.resources.dll
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Release\Webpage.Resources.HomeText.resources
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Release\Webpage.Resources.HomeText.sv.resources
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Release\sv\Webpage.resources.dll

@@ -1,26 +1,48 @@
 ﻿@{
     ViewBag.Title = "Contact";
 }
-<h2>@ViewBag.Title.</h2>
+<section class="container">
+    <article >
+        <img width="100%" class="img-responsive" src="~/images/Contact/_hrm-contact_eng.jpg" />
+    </article>
 
-<form>
-    <label>Name</label>
-    <input name="name" placeholder="Type Here" />
+    <br />
+    <section class="row">
+        @for (int i = 0; i < 10; i++)
+        {
+            <article class="col-lg-4 col-md-6">
 
-    <label>Email</label>
-    <input name="email" type="email" placeholder="Email" />
+                <img width="100%" src="~/images/Contact/26012015_anders_kontakt.jpg" />
+                <br />
+                <strong style="font-size:16px">Anders Malmsten</strong>
+                <p style="font-size:12px">Senior Manager Engineering & Project Management</p>
+                <p style="font-size:12px">073-398 90 30</p>
+                <p style="font-size:12px">anders.malmsten@hrmengineering.se</p>
+            </article>
+        }
 
-    <label>Message</label>
-    <textarea name="message" placeholder="Type Here"></textarea>
 
-    <input type="submit" id="submit" name="submit" value="Submit" />
-</form>
+    </section>
 
+    <section class="" style="float:left">
+        <form>
+            <label>Name</label>
+            <input name="name" placeholder="Type Here" />
 
-<address>
-    HRM Engineering<br />
-    Eriksbergstorget 11<br />
-    <abbr title="Phone">P:</abbr>
-    425.555.0100
-</address>
+            <label>Email</label>
+            <input name="email" type="email" placeholder="Email" />
 
+            <label>Message</label>
+            <textarea name="message" placeholder="Type Here"></textarea>
+
+            <input type="submit" id="submit" name="submit" value="Submit" />
+        </form>
+    </section>
+    <address>
+        HRM Engineering<br />
+        Eriksbergstorget 11<br />
+        <abbr title="Phone">P:</abbr>
+        425.555.0100
+    </address>
+
+</section>

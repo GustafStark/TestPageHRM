@@ -55,6 +55,13 @@
                 @Html.ValidationMessageFor(model => model.Author, "", new { @class = "text-danger" })
             </div>
         </div>
+        <div class="form-group">
+            @Html.LabelFor(model => model.Visable, htmlAttributes: new { @class = "control-lable col-md-2" })
+            <div class="checkbox">
+                @Html.EditorFor(model => model.Visable)
+                @Html.ValidationMessageFor(model => model.Visable, "", new { @class = "text-danger" })
+            </div>
+        </div>
 
         <div class="form-group">
             <div class="col-md-offset-2 col-md-10">

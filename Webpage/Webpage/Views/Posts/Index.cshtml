@@ -4,7 +4,7 @@
     ViewBag.Title = "Index";
 }
 
-<h2>Index</h2>
+<h1>Redigera post</h1>
 
 <p>
     @Html.ActionLink("Create New", "Create")
@@ -22,6 +22,9 @@
         </th>
         <th>
             @Html.DisplayNameFor(model => model.LongTest)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.Visable)
         </th>
         <th>
             @Html.DisplayNameFor(model => model.Author)
@@ -43,6 +46,9 @@
         <td>
             @Html.DisplayFor(modelItem => item.LongTest)
         </td>
+        <th>
+            @Html.DisplayFor(modelItem => item.Visable)
+        </th>
         <td>
             @Html.DisplayFor(modelItem => item.Author)
         </td>

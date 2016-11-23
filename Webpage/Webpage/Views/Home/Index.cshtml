@@ -1,5 +1,6 @@
 ﻿@{
     ViewBag.Title = "Home Page";
+
 }
 
 <div class="parallax">
@@ -8,37 +9,40 @@
 
             <img class="image-background" src="~/images/photo-1473873446975-123c5143248b.jpg" />
             <div class="title">
-                <h1>HRM Engineering</h1>
-                <p>Teknik & Miljö i Samverkan</p>
+                @*<h1>HRM Engineering</h1>
+                    <p>Teknik & Miljö i Samverkan</p>*@
+                <h1>@ViewBag.HeaderOne</h1>
+                <p>@ViewBag.HeaderOneSub</p>
             </div>
         </div>
     </div>
     <div class="parallax__group">
         <div class="parallax__layer parallax__layer--base">
-            <div class="title size-35">"HRM skall erbjuda ingenjörstjänster som ger uppdragsgivaren ett tekniskt och miljömässigt försprång gentemot sina konkurrenter."</div>
+            <div>
+                <p style="color:beige" class="text-area">
+                   "@ViewBag.HeaderTwo"
+            
+                </p>
+            </div>
         </div>
         <div class="parallax__layer parallax__layer--back">
             <img class="image-background" src="~/images/photo-1439123068749-20f4035bd7ed.jpg" />
+
         </div>
     </div>
     <div id="group1" class="parallax__group">
         <div class="parallax__layer parallax__layer--base">
             <div class="title">
+                <p>@ViewBag.FindOurExpertise</p>
                 <p>
-                    Hos oss hittar du experter inom: <br />
-                    @Html.ActionLink("Ljud och Vibrationer", "SoundAndEnviorment", "Departement");&nbsp;
-
-                    @Html.ActionLink("Mekanik", "Mekanik", "Departement");     &nbsp;
-
-                    @Html.ActionLink("Elektronik & mjukvaruutveckling ", "ElekMjuk", "Departement");
-
+                   <br />
+                    @Html.ActionLink(Webpage.Resources.HomeText.Soundandvibration, "SoundAndEnviorment", "Departement", null, new { @class = "alink" })&nbsp;
+                    @Html.ActionLink(Webpage.Resources.HomeText.Mechanics, "Mekanik", "Departement", null, new { @class = "alink" })    &nbsp;
+                    @Html.ActionLink(Webpage.Resources.HomeText.Electronicssoftwaredevelopment, "ElekMjuk", "Departement", null, new { @class = "alink" })
                     <br />
-
-                    @Html.ActionLink("Hybrid- & elfordon", "HybridElec", "Departement"); &nbsp;
-
-                    @Html.ActionLink("Miljö & kvalitet", "EnviormentQuality", "Departement");&nbsp;
-
-                    @Html.ActionLink("Utbildning", "Education", "Departement");
+                    @Html.ActionLink(Webpage.Resources.HomeText.Hybridelectricvehicles, "HybridElec", "Departement", null, new { @class = "alink" }) &nbsp;
+                    @Html.ActionLink(Webpage.Resources.HomeText.EnvironmentQuality, "EnviormentQuality", "Departement", null, new { @class = "alink" })&nbsp;
+                    @Html.ActionLink(Webpage.Resources.HomeText.Education, "Education", "Departement", null, new { @class = "alink" })
                 </p>
             </div>
         </div>
@@ -46,8 +50,8 @@
     <div id="group2" class="parallax__group">
         <div class="parallax__layer parallax__layer--base">
             <div class="title ">
-                <h1>Arbetsglädje. Kompetens. Tydlighet</h1>
-                <p>   De här tre orden är ryggraden i hur vi tänker på HRM. Det är den goda cirkeln som ger personlig utveckling och hållbar lönsamhet.</p>
+                <h1>@ViewBag.HeaderThree</h1>
+                <p>@ViewBag.HeaderThreeSub  </p>
             </div>
         </div>
         <div class="parallax__layer parallax__layer--back">
@@ -58,10 +62,16 @@
         <div class="parallax__layer parallax__layer--base">
 
             <div class="title">
+                <p>@ViewBag.FindOurExpertise</p>
                 <p>
-                    Det senaste vi har arbetad med inom: <br />
-
-                    Ljud och Vibrationer &nbsp; Mekanik  &nbsp;  Elektronik & mjukvaruutveckling <br /> Hybrid- & elfordon &nbsp; Miljö & kvalitet &nbsp; Utbildning
+                    <br />
+                    @Html.ActionLink(Webpage.Resources.HomeText.Soundandvibration, "SoundAndEnviorment", "Departement", null, new { @class = "alink" })&nbsp;
+                    @Html.ActionLink(Webpage.Resources.HomeText.Mechanics, "Mekanik", "Departement", null, new { @class = "alink" })    &nbsp;
+                    @Html.ActionLink(Webpage.Resources.HomeText.Electronicssoftwaredevelopment, "ElekMjuk", "Departement", null, new { @class = "alink" })
+                    <br />
+                    @Html.ActionLink(Webpage.Resources.HomeText.Hybridelectricvehicles, "HybridElec", "Departement", null, new { @class = "alink" }) &nbsp;
+                    @Html.ActionLink(Webpage.Resources.HomeText.EnvironmentQuality, "EnviormentQuality", "Departement", null, new { @class = "alink" })&nbsp;
+                    @Html.ActionLink(Webpage.Resources.HomeText.Education, "Education", "Departement", null, new { @class = "alink" })
                 </p>
             </div>
         </div>
@@ -73,15 +83,15 @@
         </div>
         <div class="parallax__layer parallax__layer--base">
             <div class="title">
-                <h1>Hybrid och elfordon</h1>
-                <p>Ingen har väl kunnat undgå att el- och hybridbilar verkligen är på gång. Stora fordonstillverkare och nystartade nischföretag visar nu konceptfordon, prototyper och till och med produktionsbilar av både elfordon och hybridbilar.</p>
+                <h1>@ViewBag.HeaderFour</h1>
+                <p>@ViewBag.HeaderFourSub</p>
             </div>
         </div>
     </div>
     <div id="group1" class="parallax__group">
         <div class="parallax__layer parallax__layer--base">
 
-            <p class="title">Focus på framtidens teknik</p>
+            <p class="title">@ViewBag.HeaderFive</p>
         </div>
     </div>
 </div>

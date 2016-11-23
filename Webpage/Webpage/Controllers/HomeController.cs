@@ -10,6 +10,52 @@ namespace Webpage.Controllers
     {
         public ActionResult Index()
         {
+            if (Request.Cookies["Language"] != null)
+            {
+               var value = Request.Cookies["Language"].Value;
+                if (value == "en")
+                {
+                    ViewBag.HeaderOneSub = "Technology & Environment Coalition";
+                    ViewBag.HeaderTwo = "HRM will provide engineering services that give the client a technically and environmentally head start over its competitors ";
+                    
+                    ViewBag.FindOurExpertise = "Here you will find experts in";
+                    ViewBag.HeaderThree = "Job satisfaction. Competence. Clarity";
+                    ViewBag.HeaderThreeSub = "These three words are the backbone of our thinking at HRM.Det is the virtuous circle that provides personal development and sustainable profitability.";
+
+                    ViewBag.HeaderFour = "Hybrid and electric vehicles";
+                    ViewBag.HeaderFourSub = "No one has been able to avoid electric and hybrid cars is really going on. Major automotive manufacturers and fledgling niche business is now showing concept vehicles, prototypes and even production cars of both electric and hybrid cars.";
+
+                    ViewBag.HeaderFive = "Focus on the future of technology";
+                }
+                else
+                {
+                    ViewBag.HeaderOneSub = "Teknik & Miljö i Samverkan";
+                    ViewBag.HeaderTwo = "HRM skall erbjuda ingenjörstjänster som ger uppdragsgivaren ett tekniskt och miljömässigt försprång gentemot sina konkurrenter";
+                   
+                    ViewBag.FindOurExpertise = "Hos oss hittar du experter inom";
+                    ViewBag.HeaderThree = "Arbetsglädje. Kompetens. Tydlighet";
+                    ViewBag.HeaderThreeSub = "De här tre orden är ryggraden i hur vi tänker på HRM.Det är den goda cirkeln som ger personlig utveckling och hållbar lönsamhet.";
+
+                    ViewBag.HeaderFour = "Hybrid och elfordon";
+                    ViewBag.HeaderFourSub = "Ingen har väl kunnat undgå att el- och hybridbilar verkligen är på gång. Stora fordonstillverkare och nystartade nischföretag visar nu konceptfordon, prototyper och till och med produktionsbilar av både elfordon och hybridbilar.";
+
+                    ViewBag.HeaderFive = "Focus på framtidens teknik";
+                }
+            }
+            else
+            {
+                ViewBag.HeaderOneSub = "Teknik & Miljö i Samverkan";
+                ViewBag.HeaderTwo = "HRM skall erbjuda ingenjörstjänster som ger uppdragsgivaren ett tekniskt och miljömässigt försprång gentemot sina konkurrenter";
+                ViewBag.FindOurExpertise = "Hos oss hittar du experter inom";
+                ViewBag.HeaderThree = "Arbetsglädje. Kompetens. Tydlighet";
+                ViewBag.HeaderThreeSub = "De här tre orden är ryggraden i hur vi tänker på HRM.Det är den goda cirkeln som ger personlig utveckling och hållbar lönsamhet.";
+                ViewBag.HeaderFour = "Hybrid och elfordon";
+                ViewBag.HeaderFourSub = "Ingen har väl kunnat undgå att el- och hybridbilar verkligen är på gång. Stora fordonstillverkare och nystartade nischföretag visar nu konceptfordon, prototyper och till och med produktionsbilar av både elfordon och hybridbilar.";
+                ViewBag.HeaderFive = "Focus på framtidens teknik";
+
+            }
+            ViewBag.HeaderOne = "HRM Engineering";
+
             return View();
         }
 
@@ -30,7 +76,7 @@ namespace Webpage.Controllers
         {
             return View();
         }
-        
+
         public ActionResult Ourwork()
         {
             var xImageFiles = new Webpage.Models.ImageModel();
@@ -44,20 +90,6 @@ namespace Webpage.Controllers
         {
             return View();
         }
-        //public static string ActionLinkWithImage(this HtmlHelper html,string imgSrc, string actionName)
-        //{
-        //    UrlHelper xUrlHelper = new UrlHelper(html.ViewContext.RequestContext);
-        //    string sImageUrl = xUrlHelper.Content(imgSrc);
-        //    TagBuilder xTagBuilder = new TagBuilder("img");
-        //    xTagBuilder.MergeAttribute("src", sImageUrl);
-        //    string sImage = xTagBuilder.ToString(TagRenderMode.Normal);
-        //    string sUrl = xUrlHelper.Action(actionName);
-
-        //    TagBuilder xTabBuilderSecound = new TagBuilder("a") { InnerHtml = sImage };
-        //    xTabBuilderSecound.MergeAttribute("href", sUrl);
-
-        //       return xTabBuilderSecound.ToString(TagRenderMode.Normal);
-        //}
         public ActionResult SoundAndEnviorment()
         {
             return View();

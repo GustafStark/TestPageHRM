@@ -6,18 +6,17 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
-using Webpage.Models;
 
 namespace Webpage.Controllers
 {
     public class JobOffersController : Controller
     {
-        private WebpageContext db = new WebpageContext();
+        private JobOffersDBContext db = new JobOffersDBContext();
 
         // GET: JobOffers
         public ActionResult Index()
         {
-            return View(db.JobOffers.ToList());
+            return View(db.JobOfferss.ToList());
         }
 
         // GET: JobOffers/Details/5
@@ -27,7 +26,7 @@ namespace Webpage.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            JobOffers jobOffers = db.JobOffers.Find(id);
+            JobOffers jobOffers = db.JobOfferss.Find(id);
             if (jobOffers == null)
             {
                 return HttpNotFound();
@@ -46,11 +45,11 @@ namespace Webpage.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "JobOffersID,Title,AboutTheWork,Qualifications,Email,Author")] JobOffers jobOffers)
+        public ActionResult Create([Bind(Include = "JobOffersID,Title,AboutTheWork,EndDate,PhoneNumber,Email,Visable,Author")] JobOffers jobOffers)
         {
             if (ModelState.IsValid)
             {
-                db.JobOffers.Add(jobOffers);
+                db.JobOfferss.Add(jobOffers);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -65,7 +64,7 @@ namespace Webpage.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            JobOffers jobOffers = db.JobOffers.Find(id);
+            JobOffers jobOffers = db.JobOfferss.Find(id);
             if (jobOffers == null)
             {
                 return HttpNotFound();
@@ -78,7 +77,7 @@ namespace Webpage.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "JobOffersID,Title,AboutTheWork,Qualifications,Email,Author")] JobOffers jobOffers)
+        public ActionResult Edit([Bind(Include = "JobOffersID,Title,AboutTheWork,EndDate,PhoneNumber,Email,Visable,Author")] JobOffers jobOffers)
         {
             if (ModelState.IsValid)
             {
@@ -96,7 +95,7 @@ namespace Webpage.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            JobOffers jobOffers = db.JobOffers.Find(id);
+            JobOffers jobOffers = db.JobOfferss.Find(id);
             if (jobOffers == null)
             {
                 return HttpNotFound();
@@ -109,8 +108,8 @@ namespace Webpage.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            JobOffers jobOffers = db.JobOffers.Find(id);
-            db.JobOffers.Remove(jobOffers);
+            JobOffers jobOffers = db.JobOfferss.Find(id);
+            db.JobOfferss.Remove(jobOffers);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

@@ -21,8 +21,5 @@ namespace Webpage.Controllers
         public string Author { get; set; }
 
     }
-    public class PostDbContest : DbContext
-    {
-        public DbSet<Post> Posts { get; set; }
-    } 
+
 }
