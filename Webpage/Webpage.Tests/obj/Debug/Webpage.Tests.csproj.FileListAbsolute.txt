@@ -51,7 +51,7 @@ C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage.Tests\bin\Debug\Microsoft.AspNet.Identity.EntityFramework.xml
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage.Tests\bin\Debug\EntityFramework.xml
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage.Tests\bin\Debug\Microsoft.Owin.Host.SystemWeb.xml
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage.Tests\bin\Debug\sv\Webpage.resources.dll
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage.Tests\obj\Debug\Webpage.Tests.csprojResolveAssemblyReference.cache
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage.Tests\obj\Debug\Webpage.Tests.dll
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage.Tests\obj\Debug\Webpage.Tests.pdb
-C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage.Tests\bin\Debug\sv\Webpage.resources.dll

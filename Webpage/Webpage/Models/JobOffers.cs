@@ -42,6 +42,7 @@ namespace Webpage.Controllers
         public int JobOffersID { get; set; }
 
         public virtual Experience Experience { get; set; }
+       
         public virtual JobOffers JobOffers { get; set; }
 
     }

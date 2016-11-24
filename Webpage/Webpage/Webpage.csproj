@@ -168,23 +168,23 @@
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
     <Compile Include="Controllers\AccountController.cs" />
-    <Compile Include="Controllers\ContactsController.cs" />
     <Compile Include="Controllers\DepartementController.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobOffersController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
-    <Compile Include="Migrations\201611231529459_boo.cs" />
-    <Compile Include="Migrations\201611231529459_boo.Designer.cs">
-      <DependentUpon>201611231529459_boo.cs</DependentUpon>
+    <Compile Include="Migrations\201611241422352_goo.cs" />
+    <Compile Include="Migrations\201611241422352_goo.Designer.cs">
+      <DependentUpon>201611241422352_goo.cs</DependentUpon>
     </Compile>
-    <Compile Include="Migrations\201611231531414_boo1.cs" />
-    <Compile Include="Migrations\201611231531414_boo1.Designer.cs">
-      <DependentUpon>201611231531414_boo1.cs</DependentUpon>
+    <Compile Include="Migrations\201611241432517_goo1.cs" />
+    <Compile Include="Migrations\201611241432517_goo1.Designer.cs">
+      <DependentUpon>201611241432517_goo1.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contact.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Models\JobOffers.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Models\Post.cs" />
@@ -267,11 +267,9 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
-    <Content Include="images\Contact\26012015_anders_kontakt.jpg" />
     <Content Include="images\Contact\26012015_sandra_kontakt.jpg" />
     <Content Include="images\Contact\ann-charlotte-ryden-kontakt.jpg" />
     <Content Include="images\Contact\cecilia-kontakt.jpg" />
-    <Content Include="images\Contact\hrm-kontakt_anders_magnusson.jpg" />
     <Content Include="images\Contact\jorgen-tornquist-kontakt.jpg" />
     <Content Include="images\Contact\mats-rogbrandt-kontakt.jpg" />
     <Content Include="Web.config" />
@@ -330,11 +328,7 @@
     <Content Include="Views\JobOffers\Details.cshtml" />
     <Content Include="Views\JobOffers\Edit.cshtml" />
     <Content Include="Views\JobOffers\Index.cshtml" />
-    <Content Include="Views\Contacts\Create.cshtml" />
-    <Content Include="Views\Contacts\Delete.cshtml" />
-    <Content Include="Views\Contacts\Details.cshtml" />
-    <Content Include="Views\Contacts\Edit.cshtml" />
-    <Content Include="Views\Contacts\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -348,11 +342,11 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611231529459_boo.resx">
-      <DependentUpon>201611231529459_boo.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611241422352_goo.resx">
+      <DependentUpon>201611241422352_goo.cs</DependentUpon>
     </EmbeddedResource>
-    <EmbeddedResource Include="Migrations\201611231531414_boo1.resx">
-      <DependentUpon>201611231531414_boo1.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611241432517_goo1.resx">
+      <DependentUpon>201611241432517_goo1.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\HomeText.sv.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
