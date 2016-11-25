@@ -1,27 +1,43 @@
-﻿@{
+﻿@model IEnumerable<Webpage.Models.Contact>
+
+@{
     ViewBag.Title = "Contact";
 }
 <section class="container">
-    <article >
+    <article>
         <img width="100%" class="img-responsive" src="~/images/Contact/_hrm-contact_eng.jpg" />
     </article>
 
     <br />
     <section class="row">
-        @for (int i = 0; i < 10; i++)
+        @*@for (int i = 0; i < 10; i++)
+            {
+                <article class="col-lg-4 col-md-6">
+
+                    <img width="100%" src="~/images/Contact/26012015_anders_kontakt.jpg" />
+                    <br />
+                    <strong style="font-size:16px">Anders Malmsten</strong>
+                    <p style="font-size:12px">Senior Manager Engineering & Project Management</p>
+                    <p style="font-size:12px">073-398 90 30</p>
+                    <p style="font-size:12px">anders.malmsten@hrmengineering.se</p>
+                </article>
+            }*@
+
+        @foreach (var item in Model)
         {
             <article class="col-lg-4 col-md-6">
-
-                <img width="100%" src="~/images/Contact/26012015_anders_kontakt.jpg" />
+                @if (item.ImagePath != null || item.ImagePath == "")
+                {
+                    string temp = "~/images/Contact/" + item.ImagePath;
+                    <img src="@Url.Content(temp)" alt="Alternate Text" />
+                }
                 <br />
-                <strong style="font-size:16px">Anders Malmsten</strong>
-                <p style="font-size:12px">Senior Manager Engineering & Project Management</p>
-                <p style="font-size:12px">073-398 90 30</p>
-                <p style="font-size:12px">anders.malmsten@hrmengineering.se</p>
+                <strong style="font-size:16px">@item.Name<</strong>
+                <p style="font-size:12px">@item.Posistion</p>
+                <p style="font-size:12px">@item.Phone</p>
+                <p style="font-size:12px">@item.Email</p>
             </article>
         }
-
-
     </section>
 
     <section class="" style="float:left">

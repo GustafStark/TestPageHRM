@@ -3,11 +3,13 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Webpage.Models;
 
 namespace Webpage.Controllers
 {
     public class HomeController : Controller
     {
+        private WebpageContext db = new WebpageContext();
         public ActionResult Index()
         {
             if (Request.Cookies["Language"] != null)
@@ -70,7 +72,7 @@ namespace Webpage.Controllers
         {
             ViewBag.Message = "Your contact page.";
 
-            return View();
+            return View(db.Contact.ToList());
         }
         public ActionResult Expertise()
         {

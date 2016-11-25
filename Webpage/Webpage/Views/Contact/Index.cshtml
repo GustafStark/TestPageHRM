@@ -1,9 +1,9 @@
-﻿@model Webpage.Models.Contact
+﻿@model IEnumerable<Webpage.Models.Contact>
 
-@{ 
+@{
     ViewBag.Title = "Index";
 }
-@using (Html.BeginForm(null,null,FormMethod.Post,new { enctype = "multipart/form-data" }))
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
 {
     <table>
         <tr>
@@ -12,11 +12,38 @@
         </tr>
         <tr>
             <td>Name</td>
-        <td><input type="text" name="Name" id="Name"/></td>
-                </tr>
+            <td><input type="text" name="Name" id="Name" /></td>
+        </tr>
+        <tr>
+            <td>Posistion</td>
+            <td><input type="text" name="Posistion" id="Name" /></td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td><input type="text" name="Phone" id="Name" /></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" name="Email" id="Name" /></td>
+        </tr>
         <tr>
             <td>&nbsp;</td>
             <td><input type="submit" name="submit" value="Upload" /></td>
         </tr>
     </table>
+}
+
+@foreach (var item in Model)
+{
+
+    if (item.ImagePath != null || item.ImagePath == "")
+    {
+        string temp = "~/images/Contact/" + item.ImagePath;
+        <img src="@Url.Content(temp)" alt="Alternate Text" />
+    }
+    <p>@item.Name</p>
+    <p>@item.Posistion</p>
+    <p>@item.Phone</p>
+    <p>@item.Email</p>
+
 }

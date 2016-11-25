@@ -13,7 +13,7 @@ namespace Webpage.Models
         // GET: Contact
         public ActionResult Index()
         {
-            return View();
+            return View(db.Contact.ToList());
         }
         [HttpPost]
         public ActionResult Index(Contact xContact)
@@ -22,15 +22,16 @@ namespace Webpage.Models
             {
                 string sFileName = Path.GetFileName(xContact.File.FileName);
                 string sPath = Path.Combine(Server.MapPath("~/images/Contact"), sFileName);
-                Create(xContact);
+                Create(xContact,sFileName);
                 xContact.File.SaveAs(sPath);
             }
             return RedirectToAction("Index");
         }
-        private void Create(Contact xContact)
+        private void Create(Contact xContact,string sFileName)
         {
             if (db != null)
             {
+                xContact.ImagePath = xContact.File.FileName ;
                 db.Contact.Add(xContact);
                 db.SaveChanges();
             }
