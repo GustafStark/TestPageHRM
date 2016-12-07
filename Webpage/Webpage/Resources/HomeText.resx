@@ -156,4 +156,7 @@
   <data name="Soundandvibration" xml:space="preserve">
     <value>Sound and Vibration</value>
   </data>
+  <data name="TestText" xml:space="preserve">
+    <value>Now i am in English</value>
+  </data>
 </root>

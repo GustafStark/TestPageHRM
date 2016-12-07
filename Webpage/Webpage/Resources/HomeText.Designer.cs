@@ -176,5 +176,14 @@ namespace Webpage.Resources {
                 return ResourceManager.GetString("Soundandvibration", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Now i am in English.
+        /// </summary>
+        public static string TestText {
+            get {
+                return ResourceManager.GetString("TestText", resourceCulture);
+            }
+        }
     }
 }

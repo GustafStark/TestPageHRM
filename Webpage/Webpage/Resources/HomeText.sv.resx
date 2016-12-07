@@ -153,4 +153,7 @@
   <data name="Soundandvibration" xml:space="preserve">
     <value>Ljud och vibrationer</value>
   </data>
+  <data name="TestText" xml:space="preserve">
+    <value>Nu är jag på Svenska</value>
+  </data>
 </root>

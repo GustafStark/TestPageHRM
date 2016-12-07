@@ -24,5 +24,6 @@ namespace Webpage.Models
         public DbSet<Webpage.Controllers.JobOffers> JobOffers { get; set; }
 
         public DbSet<Webpage.Models.Contact> Contact { get; set; }
+        public DbSet<Resource> Resources { get; set; }
     }
 }

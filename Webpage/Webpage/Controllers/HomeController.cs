@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Webpage.Concrete;
 using Webpage.Models;
 
 namespace Webpage.Controllers
@@ -10,60 +11,28 @@ namespace Webpage.Controllers
     public class HomeController : Controller
     {
         private WebpageContext db = new WebpageContext();
+        private DBResoruceProvider xDBProvider = new DBResoruceProvider();
         public ActionResult Index()
         {
-            if (Request.Cookies["Language"] != null)
-            {
-               var value = Request.Cookies["Language"].Value;
-                if (value == "en")
-                {
-                    ViewBag.HeaderOneSub = "Technology & Environment Coalition";
-                    ViewBag.HeaderTwo = "HRM will provide engineering services that give the client a technically and environmentally head start over its competitors ";
-                    
-                    ViewBag.FindOurExpertise = "Here you will find experts in";
-                    ViewBag.HeaderThree = "Job satisfaction. Competence. Clarity";
-                    ViewBag.HeaderThreeSub = "These three words are the backbone of our thinking at HRM.Det is the virtuous circle that provides personal development and sustainable profitability.";
-
-                    ViewBag.HeaderFour = "Hybrid and electric vehicles";
-                    ViewBag.HeaderFourSub = "No one has been able to avoid electric and hybrid cars is really going on. Major automotive manufacturers and fledgling niche business is now showing concept vehicles, prototypes and even production cars of both electric and hybrid cars.";
-
-                    ViewBag.HeaderFive = "Focus on the future of technology";
-                }
-                else
-                {
-                    ViewBag.HeaderOneSub = "Teknik & Miljö i Samverkan";
-                    ViewBag.HeaderTwo = "HRM skall erbjuda ingenjörstjänster som ger uppdragsgivaren ett tekniskt och miljömässigt försprång gentemot sina konkurrenter";
-                   
-                    ViewBag.FindOurExpertise = "Hos oss hittar du experter inom";
-                    ViewBag.HeaderThree = "Arbetsglädje. Kompetens. Tydlighet";
-                    ViewBag.HeaderThreeSub = "De här tre orden är ryggraden i hur vi tänker på HRM.Det är den goda cirkeln som ger personlig utveckling och hållbar lönsamhet.";
-
-                    ViewBag.HeaderFour = "Hybrid och elfordon";
-                    ViewBag.HeaderFourSub = "Ingen har väl kunnat undgå att el- och hybridbilar verkligen är på gång. Stora fordonstillverkare och nystartade nischföretag visar nu konceptfordon, prototyper och till och med produktionsbilar av både elfordon och hybridbilar.";
-
-                    ViewBag.HeaderFive = "Focus på framtidens teknik";
-                }
-            }
-            else
-            {
-                ViewBag.HeaderOneSub = "Teknik & Miljö i Samverkan";
-                ViewBag.HeaderTwo = "HRM skall erbjuda ingenjörstjänster som ger uppdragsgivaren ett tekniskt och miljömässigt försprång gentemot sina konkurrenter";
-                ViewBag.FindOurExpertise = "Hos oss hittar du experter inom";
-                ViewBag.HeaderThree = "Arbetsglädje. Kompetens. Tydlighet";
-                ViewBag.HeaderThreeSub = "De här tre orden är ryggraden i hur vi tänker på HRM.Det är den goda cirkeln som ger personlig utveckling och hållbar lönsamhet.";
-                ViewBag.HeaderFour = "Hybrid och elfordon";
-                ViewBag.HeaderFourSub = "Ingen har väl kunnat undgå att el- och hybridbilar verkligen är på gång. Stora fordonstillverkare och nystartade nischföretag visar nu konceptfordon, prototyper och till och med produktionsbilar av både elfordon och hybridbilar.";
-                ViewBag.HeaderFive = "Focus på framtidens teknik";
-
-            }
-            ViewBag.HeaderOne = "HRM Engineering";
+            ViewBag.HeaderOne = xDBProvider.GetResource("HomeHeader", Request.Cookies["Language"].Value);
+            ViewBag.HomeHeaderOneSub = xDBProvider.GetResource("HomeHeaderOneSub", Request.Cookies["Language"].Value);
+            ViewBag.HeaderTwo = xDBProvider.GetResource("HomeTextOne", Request.Cookies["Language"].Value);
+            ViewBag.FindOurExpertise = xDBProvider.GetResource("HomeTextTwo", Request.Cookies["Language"].Value);
+            ViewBag.HeaderThree = xDBProvider.GetResource("HomeHeaderTwo", Request.Cookies["Language"].Value);
+            ViewBag.HeaderThreeSub = xDBProvider.GetResource("HomeTextThree", Request.Cookies["Language"].Value);
+            ViewBag.HeaderFour = xDBProvider.GetResource("HomeHeaderThree", Request.Cookies["Language"].Value);
+            ViewBag.HeaderFourSub = xDBProvider.GetResource("HomeHeaderThreeText", Request.Cookies["Language"].Value);
+            ViewBag.HeaderFive = xDBProvider.GetResource("HomeEnd", Request.Cookies["Language"].Value);
 
             return View();
         }
 
         public ActionResult About()
         {
+            
             ViewBag.Message = "Inget vanligt konsultföretag";
+            ViewBag.Text = xDBProvider.GetResource("Test", Request.Cookies["Language"].Value);
+         
 
             return View();
         }
@@ -76,6 +45,18 @@ namespace Webpage.Controllers
         }
         public ActionResult Expertise()
         {
+            ViewBag.HeaderOne = xDBProvider.GetResource("ExpertiseHeaderOne", Request.Cookies["Language"].Value);
+            ViewBag.SubOne = xDBProvider.GetResource("ExpertiseSubOne", Request.Cookies["Language"].Value);
+            ViewBag.HeaderTwo = xDBProvider.GetResource("ExpertiseHeaderTwo", Request.Cookies["Language"].Value);
+            ViewBag.SubTwo = xDBProvider.GetResource("ExpertiseSubTwo", Request.Cookies["Language"].Value);
+            ViewBag.HeaderThree = xDBProvider.GetResource("ExpertiseHeaderThree", Request.Cookies["Language"].Value);
+            ViewBag.SubThree = xDBProvider.GetResource("ExpertiseSubThree", Request.Cookies["Language"].Value);
+            ViewBag.HeaderFour = xDBProvider.GetResource("ExpertiseHeaderFour", Request.Cookies["Language"].Value);
+            ViewBag.SubFour = xDBProvider.GetResource("ExpertiseSubFour", Request.Cookies["Language"].Value);
+            ViewBag.HeaderFive = xDBProvider.GetResource("ExpertiseHeaderFive", Request.Cookies["Language"].Value);
+            ViewBag.SubFive = xDBProvider.GetResource("ExpertiseSubFive", Request.Cookies["Language"].Value);
+            ViewBag.HeaderSix = xDBProvider.GetResource("ExpertiseHeaderSix", Request.Cookies["Language"].Value);
+            ViewBag.SubSix = xDBProvider.GetResource("ExpertiseSubSix", Request.Cookies["Language"].Value);
             return View();
         }
 
@@ -90,6 +71,8 @@ namespace Webpage.Controllers
         }
         public ActionResult Career()
         {
+           
+
             return View();
         }
         public ActionResult SoundAndEnviorment()

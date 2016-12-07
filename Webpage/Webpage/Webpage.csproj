@@ -167,6 +167,7 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Concrete\DBResoruceProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DepartementController.cs" />
     <Compile Include="Controllers\ExperienceController.cs" />
@@ -174,6 +175,7 @@
     <Compile Include="Controllers\JobOffersController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
+    <Compile Include="Interface\IResourceProvider.cs" />
     <Compile Include="Migrations\201611241422352_goo.cs" />
     <Compile Include="Migrations\201611241422352_goo.Designer.cs">
       <DependentUpon>201611241422352_goo.cs</DependentUpon>
@@ -181,6 +183,18 @@
     <Compile Include="Migrations\201611241432517_goo1.cs" />
     <Compile Include="Migrations\201611241432517_goo1.Designer.cs">
       <DependentUpon>201611241432517_goo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612071220296_boo.cs" />
+    <Compile Include="Migrations\201612071220296_boo.Designer.cs">
+      <DependentUpon>201612071220296_boo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612071221327_boo1.cs" />
+    <Compile Include="Migrations\201612071221327_boo1.Designer.cs">
+      <DependentUpon>201612071221327_boo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612071223042_boo2.cs" />
+    <Compile Include="Migrations\201612071223042_boo2.Designer.cs">
+      <DependentUpon>201612071223042_boo2.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -195,8 +209,14 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ImageModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Resource.cs" />
     <Compile Include="Models\WebpageContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
     <Compile Include="Resources\HomeText.sv.Designer.cs">
       <DependentUpon>HomeText.sv.resx</DependentUpon>
       <AutoGen>True</AutoGen>
@@ -207,6 +227,7 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>HomeText.resx</DependentUpon>
     </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="Startup.cs" />
     <Compile Include="ViewModel\JobbViewModel.cs" />
   </ItemGroup>
@@ -255,6 +276,10 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\Gustaf - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\Gustaf - Web Deploy.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -321,14 +346,15 @@
     <Content Include="Views\Departement\Education.cshtml" />
     <Content Include="Views\Departement\SoundAndEnviorment.cshtml" />
     <Content Include="Views\Departement\Index.cshtml" />
-    <Content Include="Views\Language\Index.cshtml" />
+    <Content Include="Views\OwnerPage\Language\Index.cshtml" />
     <Content Include="Views\Experience\Index.cshtml" />
     <Content Include="Views\JobOffers\Create.cshtml" />
     <Content Include="Views\JobOffers\Delete.cshtml" />
     <Content Include="Views\JobOffers\Details.cshtml" />
     <Content Include="Views\JobOffers\Edit.cshtml" />
     <Content Include="Views\JobOffers\Index.cshtml" />
-    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\OwnerPage\Contact\Index.cshtml" />
+    <Content Include="Views\OwnerPage\EditPate.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -347,6 +373,15 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201611241432517_goo1.resx">
       <DependentUpon>201611241432517_goo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612071220296_boo.resx">
+      <DependentUpon>201612071220296_boo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612071221327_boo1.resx">
+      <DependentUpon>201612071221327_boo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612071223042_boo2.resx">
+      <DependentUpon>201612071223042_boo2.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\HomeText.sv.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

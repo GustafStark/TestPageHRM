@@ -31,7 +31,7 @@ namespace Webpage.Controllers
 
         public DbSet<Post> Posts { get; set; }
         public DbSet<Contact> Contacts { get; set; }
-
+        public DbSet<Resource> Resources { get; set; }
     }
     public class Qualification
     {
