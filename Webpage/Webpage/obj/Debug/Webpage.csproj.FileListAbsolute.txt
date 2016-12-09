@@ -140,9 +140,10 @@ C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\sv\Webpage.resources.dll
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.dll
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.pdb
-C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.csprojResolveAssemblyReference.cache
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.Migrations.goo.resources
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.Migrations.goo1.resources
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.Migrations.boo.resources
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.Migrations.boo1.resources
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.Migrations.boo2.resources
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.Migrations.AddedPage.resources
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.csprojResolveAssemblyReference.cache

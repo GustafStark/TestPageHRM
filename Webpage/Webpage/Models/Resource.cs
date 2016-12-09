@@ -11,5 +11,6 @@ namespace Webpage.Models
         public string Culture { get; set; }
         public string Name { get; set; }
         public string Value { get; set; }
+        public string Page { get; set; }
     }
 }

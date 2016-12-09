@@ -174,6 +174,7 @@
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobOffersController.cs" />
     <Compile Include="Controllers\LanguageController.cs" />
+    <Compile Include="Controllers\OwnerPageController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
     <Compile Include="Interface\IResourceProvider.cs" />
     <Compile Include="Migrations\201611241422352_goo.cs" />
@@ -195,6 +196,10 @@
     <Compile Include="Migrations\201612071223042_boo2.cs" />
     <Compile Include="Migrations\201612071223042_boo2.Designer.cs">
       <DependentUpon>201612071223042_boo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612091233559_AddedPage.cs" />
+    <Compile Include="Migrations\201612091233559_AddedPage.Designer.cs">
+      <DependentUpon>201612091233559_AddedPage.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
     <Compile Include="Models\Contact.cs" />
@@ -354,7 +359,13 @@
     <Content Include="Views\JobOffers\Edit.cshtml" />
     <Content Include="Views\JobOffers\Index.cshtml" />
     <Content Include="Views\OwnerPage\Contact\Index.cshtml" />
-    <Content Include="Views\OwnerPage\EditPate.cshtml" />
+    <Content Include="Views\OwnerPage\EditPage.cshtml" />
+    <Content Include="Views\OwnerPage\EditStart.cshtml" />
+    <Content Include="Views\OwnerPage\EditAbout.cshtml" />
+    <Content Include="Views\OwnerPage\EditExpertise.cshtml" />
+    <Content Include="Views\OwnerPage\EditCareer.cshtml" />
+    <Content Include="Views\OwnerPage\EditOurWork.cshtml" />
+    <Content Include="Views\OwnerPage\EditContact.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -382,6 +393,9 @@
     </EmbeddedResource>
     <EmbeddedResource Include="Migrations\201612071223042_boo2.resx">
       <DependentUpon>201612071223042_boo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612091233559_AddedPage.resx">
+      <DependentUpon>201612091233559_AddedPage.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="Resources\HomeText.sv.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>

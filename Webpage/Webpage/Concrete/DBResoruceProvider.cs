@@ -10,7 +10,8 @@ namespace Webpage.Concrete
 {
     public class DBResoruceProvider : IResourceProvider
     {
-        WebpageContext db = new WebpageContext();
+        private WebpageContext db = new WebpageContext();
+        public string m_sValue { get; set; }
         public object GetResource(string sName, string sCulture)
         {
             List<Resource> lxResources = new List<Resource>();
@@ -25,6 +26,35 @@ namespace Webpage.Concrete
                 }  
             }
             return "";
+        }
+        public object UpdateResources(string sName, string sCulture, string sValue)
+        {
+            //Resource xResources = new Resource();
+
+            foreach (var item in db.Resources.ToList())
+            {
+                if (item.Culture == sCulture && item.Name == sName)
+                {
+                    db.Resources.Find(item.ResourceID).Value = sValue;
+                    db.SaveChanges();
+                }
+            }
+            return "";
+        }  
+        public List<Resource> GetResource(string sPage)
+        {
+            List<Resource> lxResources = new List<Resource>();
+
+            //lxResources = db.Resources.ToList();
+
+            foreach (var item in db.Resources.ToList())
+            {
+                if (item.Page == sPage )
+                {
+                    lxResources.Add(item);
+                }
+            }
+            return lxResources;
         }
     }
 }
