@@ -7,10 +7,33 @@
 
 <h2>Create</h2>
 
-@using (Html.BeginForm()) 
+
+
+
+
+@using (Html.BeginForm())
 {
+    @*List<SelectListItem> listItems = new List<SelectListItem>();
+    listItems.Add(new SelectListItem
+    {
+        Text = "Exemplo1",
+        Value = "Exemplo1"
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Exemplo2",
+        Value = "Exemplo2",
+        Selected = true
+    });
+    listItems.Add(new SelectListItem
+    {
+        Text = "Exemplo3",
+        Value = "Exemplo3"
+    });
+    @Html.DropDownListFor("ow2", listItems, "-- Select Status --")*@
+
     @Html.AntiForgeryToken()
-    
+
     <div class="form-horizontal">
         <h4>JobOffers</h4>
         <hr />

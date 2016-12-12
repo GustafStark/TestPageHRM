@@ -56,11 +56,6 @@ namespace Webpage.Controllers
             ViewBag.GetPage = lxResources;
             return View();
         }
-
-        public ActionResult CreateJobOffer()
-        {
-            return View();
-        }
         public ActionResult EditEducation()
         {
             return View();
@@ -74,8 +69,7 @@ namespace Webpage.Controllers
             return View();
         }
         public ActionResult EditHybirdAndEleticCars()
-        {
-
+        {     
             return View();
         }
         public ActionResult EditMekanik()
@@ -86,12 +80,13 @@ namespace Webpage.Controllers
         {
             return View();
         }
-        public ActionResult ManageAccounts()
+        public ActionResult EditAccounts()
         {
             return View();
         }
         public ActionResult ManageContacts()
         {
+           
             return View();
         }
 

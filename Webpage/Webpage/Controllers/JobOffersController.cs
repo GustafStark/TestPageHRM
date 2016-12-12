@@ -6,17 +6,20 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.WebPages;
+using Webpage.Concrete;
+using Webpage.Models;
 
 namespace Webpage.Controllers
 {
     public class JobOffersController : Controller
     {
-        private JobOffersDBContext db = new JobOffersDBContext();
+        private WebpageContext db = new WebpageContext();
 
         // GET: JobOffers
         public ActionResult Index()
         {
-            return View(db.JobOfferss.ToList());
+            return View(db.JobOffers.ToList());
         }
 
         // GET: JobOffers/Details/5
@@ -26,7 +29,7 @@ namespace Webpage.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            JobOffers jobOffers = db.JobOfferss.Find(id);
+            JobOffers jobOffers = db.JobOffers.Find(id);
             if (jobOffers == null)
             {
                 return HttpNotFound();
@@ -37,6 +40,17 @@ namespace Webpage.Controllers
         // GET: JobOffers/Create
         public ActionResult Create()
         {
+
+            Experinces xExperience = new Experinces();
+            List<Experinces> lxExp = xExperience.GetExperinces();
+            List<string> lsTest = new List<string>();
+            foreach (var item in lxExp)
+            {
+                lsTest.Add(item.Value);
+            }
+            //ViewBag.Experience = xExperience.GetExperinces();
+            ViewBag.Experience = lsTest;
+
             return View();
         }
 
@@ -49,7 +63,7 @@ namespace Webpage.Controllers
         {
             if (ModelState.IsValid)
             {
-                db.JobOfferss.Add(jobOffers);
+                db.JobOffers.Add(jobOffers);
                 db.SaveChanges();
                 return RedirectToAction("Index");
             }
@@ -64,7 +78,7 @@ namespace Webpage.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            JobOffers jobOffers = db.JobOfferss.Find(id);
+            JobOffers jobOffers = db.JobOffers.Find(id);
             if (jobOffers == null)
             {
                 return HttpNotFound();
@@ -95,7 +109,7 @@ namespace Webpage.Controllers
             {
                 return new HttpStatusCodeResult(HttpStatusCode.BadRequest);
             }
-            JobOffers jobOffers = db.JobOfferss.Find(id);
+            JobOffers jobOffers = db.JobOffers.Find(id);
             if (jobOffers == null)
             {
                 return HttpNotFound();
@@ -108,8 +122,8 @@ namespace Webpage.Controllers
         [ValidateAntiForgeryToken]
         public ActionResult DeleteConfirmed(int id)
         {
-            JobOffers jobOffers = db.JobOfferss.Find(id);
-            db.JobOfferss.Remove(jobOffers);
+            JobOffers jobOffers = db.JobOffers.Find(id);
+            db.JobOffers.Remove(jobOffers);
             db.SaveChanges();
             return RedirectToAction("Index");
         }

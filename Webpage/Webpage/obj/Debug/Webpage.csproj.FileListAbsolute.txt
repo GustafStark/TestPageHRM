@@ -147,3 +147,4 @@ C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.Migrations.boo2.resources
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.Migrations.AddedPage.resources
 C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.csprojResolveAssemblyReference.cache
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage\obj\Debug\Webpage.Migrations.boo3.resources

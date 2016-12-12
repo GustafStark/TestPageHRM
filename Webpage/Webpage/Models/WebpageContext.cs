@@ -22,6 +22,9 @@ namespace Webpage.Models
         public DbSet<Webpage.Controllers.Post> Posts { get; set; }
 
         public DbSet<Webpage.Controllers.JobOffers> JobOffers { get; set; }
+        public DbSet<Controllers.Qualification> Qualifications { get; set; }
+
+
 
         public DbSet<Webpage.Models.Contact> Contact { get; set; }
         public DbSet<Resource> Resources { get; set; }

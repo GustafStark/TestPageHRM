@@ -11,7 +11,6 @@ namespace Webpage.Concrete
     public class DBResoruceProvider : IResourceProvider
     {
         private WebpageContext db = new WebpageContext();
-        public string m_sValue { get; set; }
         public object GetResource(string sName, string sCulture)
         {
             List<Resource> lxResources = new List<Resource>();
@@ -56,5 +55,6 @@ namespace Webpage.Concrete
             }
             return lxResources;
         }
+       
     }
 }
