@@ -84,11 +84,6 @@ namespace Webpage.Controllers
         {
             return View();
         }
-        public ActionResult ManageContacts()
-        {
-           
-            return View();
-        }
 
         public ActionResult Update(string sName)
         {

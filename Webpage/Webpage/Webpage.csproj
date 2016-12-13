@@ -363,7 +363,7 @@
     <Content Include="Views\JobOffers\Details.cshtml" />
     <Content Include="Views\JobOffers\Edit.cshtml" />
     <Content Include="Views\JobOffers\Index.cshtml" />
-    <Content Include="Views\OwnerPage\Contact\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
     <Content Include="Views\OwnerPage\EditPage.cshtml" />
     <Content Include="Views\OwnerPage\EditStart.cshtml" />
     <Content Include="Views\OwnerPage\EditAbout.cshtml" />
@@ -372,7 +372,6 @@
     <Content Include="Views\OwnerPage\EditOurWork.cshtml" />
     <Content Include="Views\OwnerPage\EditContact.cshtml" />
     <Content Include="Views\OwnerPage\EditAccounts.cshtml" />
-    <Content Include="Views\OwnerPage\ManageContacts.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

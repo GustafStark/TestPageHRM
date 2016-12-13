@@ -8,6 +8,7 @@ namespace Webpage.Concrete
 {
     public class Advertisement
     {
+        
         public string Title { get; }
         public string AboutTheWork { get; }
         public DateTime EndDate { get; }
@@ -18,6 +19,11 @@ namespace Webpage.Concrete
         public string Author { get; }
 
         List<Experinces> Experinces { get; }
+
+        public Advertisement()
+        {
+
+        }
 
         public Advertisement(string sTitle, string sAboutTheWork, DateTime xEndDate, string sPhoneNumber, string sEmail, bool bVisable, string sAuthur, List<Experinces> lxExperinces)
         {
@@ -31,6 +37,7 @@ namespace Webpage.Concrete
             Experinces = lxExperinces;
 
         }
+
     }
     public class Experinces
     {

@@ -6,6 +6,7 @@ using System.Linq;
 using System.Net;
 using System.Web;
 using System.Web.Mvc;
+using System.Web.Routing;
 using System.Web.WebPages;
 using Webpage.Concrete;
 using Webpage.Models;
@@ -15,6 +16,7 @@ namespace Webpage.Controllers
     public class JobOffersController : Controller
     {
         private WebpageContext db = new WebpageContext();
+        public static List<SelectListItem> m_lxList = new List<SelectListItem>();
 
         // GET: JobOffers
         public ActionResult Index()
@@ -40,19 +42,21 @@ namespace Webpage.Controllers
         // GET: JobOffers/Create
         public ActionResult Create()
         {
-
+            ViewData["Glenn"] = m_lxList;
             Experinces xExperience = new Experinces();
+            List<SelectListItem> xList = new List<SelectListItem>();
             List<Experinces> lxExp = xExperience.GetExperinces();
-            List<string> lsTest = new List<string>();
-            foreach (var item in lxExp)
-            {
-                lsTest.Add(item.Value);
-            }
-            //ViewBag.Experience = xExperience.GetExperinces();
-            ViewBag.Experience = lsTest;
 
+            for (int i = 0; i < lxExp.Count; i++)
+            {
+                xList.Add(new SelectListItem { Text = lxExp[i].Value, Value = lxExp[i].Id.ToString() });
+            }
+            m_lxList = xList;
+            ViewData["foorBarList"] = xList;
+            ViewData["Glenn"] = m_lxList;
             return View();
         }
+
 
         // POST: JobOffers/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
@@ -135,6 +139,11 @@ namespace Webpage.Controllers
                 db.Dispose();
             }
             base.Dispose(disposing);
+        }
+        public object AddToList()
+        {
+            
+            return "";
         }
     }
 }

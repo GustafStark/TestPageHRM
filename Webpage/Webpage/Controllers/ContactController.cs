@@ -18,23 +18,45 @@ namespace Webpage.Models
         [HttpPost]
         public ActionResult Index(Contact xContact)
         {
-            if (xContact.File.ContentLength >0)
+            if (xContact.File.ContentLength > 0)
             {
                 string sFileName = Path.GetFileName(xContact.File.FileName);
                 string sPath = Path.Combine(Server.MapPath("~/images/Contact"), sFileName);
-                Create(xContact,sFileName);
+                Create(xContact, sFileName);
                 xContact.File.SaveAs(sPath);
             }
             return RedirectToAction("Index");
         }
-        private void Create(Contact xContact,string sFileName)
+        private void Create(Contact xContact, string sFileName)
         {
             if (db != null)
             {
-                xContact.ImagePath = xContact.File.FileName ;
+                xContact.ImagePath = xContact.File.FileName;
                 db.Contact.Add(xContact);
                 db.SaveChanges();
             }
         }
+        public ActionResult Delete(int iId)
+        {
+
+            Contact xContact = db.Contact.Find(iId);
+            db.Contact.Remove(xContact);
+            db.SaveChanges();
+
+
+            return RedirectToAction("Index");
+        }
+        //public ActionResult Edit()
+        //{
+        //    //Contact xContact = db.Contact.Find(iId);
+           
+        //    //return RedirectToAction("Index");
+        //}
+        [HttpGet]
+        public PartialViewResult Edit()
+        {
+            return PartialView("Index");
+        }
+
     }
 }

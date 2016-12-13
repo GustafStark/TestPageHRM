@@ -55,6 +55,10 @@ namespace Webpage.Concrete
             }
             return lxResources;
         }
-       
+
+        public List<Contact> GetContacts()
+        {
+            return db.Contact.ToList();
+        }
     }
 }
