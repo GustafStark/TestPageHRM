@@ -88,9 +88,7 @@ namespace Webpage.Controllers
         public ActionResult Update(string sName)
         {
             if (sName == null) return View("EditPage");
-            
             List<Resource> lxResources = xDBProvider.GetResource(sName);
-            List<string> lsRequest = new List<string>();
             foreach (var item in lxResources)
             {
                 xDBProvider.UpdateResources(item.Name, item.Culture, Request[item.Name + item.Culture]);

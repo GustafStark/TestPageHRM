@@ -32,46 +32,76 @@
         </tr>
     </table>
 }
-@using (Html.BeginForm())
-{
-    <section class="row">
-        @foreach (var item in Model)
-        {
-            <article class="row col-md-6">
-                @if (item.ImagePath != null || item.ImagePath == "")
+
+<section class="row">
+    @foreach (var item in Model)
+    {
+        <article class="row col-md-6">
+            @if (item.ImagePath != null || item.ImagePath == "")
                 {
 
                     string temp = "~/images/Contact/" + item.ImagePath;
-                    <img src="@Url.Content(temp)" alt="Alternate Text" />
-                }
-                <p>@item.Name</p>
-                <p>@item.Posistion</p>
-                <p>@item.Phone</p>
-                <p>@item.Email</p>
+                <img src="@Url.Content(temp)" alt="Alternate Text" />
 
-                @Html.ActionLink("Delete", "Delete", new { iId = item.ContactId })
-                @*<button onclick=""> Edit</button>*@
-                
-            </article>
-        }
-    </section>
- 
-}
-@Ajax.ActionLink("Open popup", "Edit", new AjaxOptions { HttpMethod = "GET", UpdateTargetId = "result", InsertionMode = InsertionMode.Replace, OnSuccess = "openPopup" })<br />
+            }
+            <p>@item.Name</p>
+            <p>@item.Posistion</p>
+            <p>@item.Phone</p>
+            <p>@item.Email</p>
 
-<div id="result" style="display:none;"></div>
+            @Html.ActionLink("Delete", "Delete", new { iId = item.ContactId })
+            <button onclick="PopUp('@item.Name','@item.Posistion','@item.Phone','@item.Email')"> Edit</button>
+            <div id="myDiv" class="modal">
+
+                <!-- Modal content -->
+                <div class="modal-content">
+                    @using (Html.BeginForm("Edit", "Contact"))
+                    { 
+                        <span class="close">&times;</span>
+                        <p id="StartEdit"></p><br />
+                        <input type="text" value="" id="sName" /><br />
+                        <input type="text" value="" id="Posistion" /><br />
+                        <input type="text" value="" id="Phone" /><br />
+                        <input type="text" value="" id="Email" /><br />
+                        <button onclick="Close()">Close</button>
+                        <input type="submit" onclick="Save()" value="Save" />
+                    }
+                 
+                </div>
+               
+            </div>
+            <button id="Add" onclick="Save()">Save</button>
+        </article>
+       
+    }
+</section>
 
 <script type="text/javascript">
-$(document).ready(function() {
-    $("#result").dialog({
-        autoOpen: false,
-        title: 'Title',
-        width: 500,
-        height: 'auto',
-        modal: true
-    });
-});
-function openPopup() {
-    $("#result").dialog("open");
-}
+    function PopUp(name, posistion, phone, email) {
+        var modal = document.getElementById('myDiv');
+        modal.style.display = "block";
+
+        document.getElementById("StartEdit").innerHTML = "Edit " + name;
+        document.getElementById("sName").value = name;
+        document.getElementById("Posistion").value = posistion;
+        document.getElementById("Phone").value = phone;
+        document.getElementById("Email").value = email;
+    }
+    function Close() {
+        var modal = document.getElementById('myDiv');
+        modal.style.display = "none";
+    }
+    function Save() {
+        
+        var sName = document.getElementById("sName").value
+        var sPosistion = document.getElementById("Posistion").value
+        var sPhone = document.getElementById("Phone").value
+        var sEmail = document.getElementById("Email").value
+
+         @*@Url.Action("Edit", "Contact");*@
+        var model = document.getElementById('myDiv');
+        model.style.display = "none"
+    }
+
 </script>
+

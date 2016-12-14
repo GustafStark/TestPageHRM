@@ -18,13 +18,17 @@ namespace Webpage.Models
         [HttpPost]
         public ActionResult Index(Contact xContact)
         {
-            if (xContact.File.ContentLength > 0)
+            if (xContact != null)
             {
-                string sFileName = Path.GetFileName(xContact.File.FileName);
-                string sPath = Path.Combine(Server.MapPath("~/images/Contact"), sFileName);
-                Create(xContact, sFileName);
-                xContact.File.SaveAs(sPath);
+                if (xContact.File.ContentLength > 0)
+                {
+                    string sFileName = Path.GetFileName(xContact.File.FileName);
+                    string sPath = Path.Combine(Server.MapPath("~/images/Contact"), sFileName);
+                    Create(xContact, sFileName);
+                    xContact.File.SaveAs(sPath);
+                }
             }
+
             return RedirectToAction("Index");
         }
         private void Create(Contact xContact, string sFileName)
@@ -46,16 +50,18 @@ namespace Webpage.Models
 
             return RedirectToAction("Index");
         }
-        //public ActionResult Edit()
-        //{
-        //    //Contact xContact = db.Contact.Find(iId);
-           
-        //    //return RedirectToAction("Index");
-        //}
+
         [HttpGet]
-        public PartialViewResult Edit()
+        public ActionResult Edit()
         {
-            return PartialView("Index");
+
+            //return View();
+            return RedirectToAction("Index","Home");
+        }
+        [HttpPost]
+        public void Editor(string Name, string Posistion, string Phone, string Email)
+        {
+            RedirectToAction("Index","Home");
         }
 
     }

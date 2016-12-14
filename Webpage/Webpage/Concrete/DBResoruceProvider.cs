@@ -28,7 +28,7 @@ namespace Webpage.Concrete
         }
         public object UpdateResources(string sName, string sCulture, string sValue)
         {
-            //Resource xResources = new Resource();
+           
 
             foreach (var item in db.Resources.ToList())
             {
@@ -43,8 +43,6 @@ namespace Webpage.Concrete
         public List<Resource> GetResource(string sPage)
         {
             List<Resource> lxResources = new List<Resource>();
-
-            //lxResources = db.Resources.ToList();
 
             foreach (var item in db.Resources.ToList())
             {

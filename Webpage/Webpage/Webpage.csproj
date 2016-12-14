@@ -372,6 +372,7 @@
     <Content Include="Views\OwnerPage\EditOurWork.cshtml" />
     <Content Include="Views\OwnerPage\EditContact.cshtml" />
     <Content Include="Views\OwnerPage\EditAccounts.cshtml" />
+    <Content Include="Views\Contact\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
