@@ -28,8 +28,6 @@ namespace Webpage.Concrete
         }
         public object UpdateResources(string sName, string sCulture, string sValue)
         {
-           
-
             foreach (var item in db.Resources.ToList())
             {
                 if (item.Culture == sCulture && item.Name == sName)
@@ -57,6 +55,20 @@ namespace Webpage.Concrete
         public List<Contact> GetContacts()
         {
             return db.Contact.ToList();
+        }
+        public void UpdateContact(string sName,string sPoistion, string sPhone,string sEmail, int id)
+        {
+            foreach (var item in db.Contact.ToList())
+            {
+                if (item.ContactId == id)
+                {
+                    db.Contact.Find(item.ContactId).Name = sName;
+                    db.Contact.Find(item.ContactId).Posistion = sPoistion;
+                    db.Contact.Find(item.ContactId).Phone = sPhone;
+                    db.Contact.Find(item.ContactId).Email = sEmail;
+                    db.SaveChanges();
+                }
+            }
         }
     }
 }

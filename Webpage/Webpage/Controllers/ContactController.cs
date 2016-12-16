@@ -4,12 +4,14 @@ using System.IO;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Webpage.Concrete;
 
 namespace Webpage.Models
 {
     public class ContactController : Controller
     {
         private WebpageContext db = new WebpageContext();
+        private DBResoruceProvider xDBResourceProvider = new DBResoruceProvider();
         // GET: Contact
         public ActionResult Index()
         {
@@ -51,12 +53,16 @@ namespace Webpage.Models
             return RedirectToAction("Index");
         }
 
-        [HttpGet]
+
         public ActionResult Edit()
         {
+            var x = Request["NumberForID"];
+            if (x == "" || x == null) x = "5";
+            xDBResourceProvider.UpdateContact(Request["sName"], Request["Posistion"], Request["Phone"], Request["Email"], int.Parse(x));
+            return RedirectToAction("Index");
 
             //return View();
-            return RedirectToAction("Index","Home");
+            //return RedirectToAction("Index");
         }
         [HttpPost]
         public void Editor(string Name, string Posistion, string Phone, string Email)

@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+
 using System.Data;
 using System.Data.Entity;
 using System.Linq;
@@ -16,7 +17,6 @@ namespace Webpage.Controllers
     public class JobOffersController : Controller
     {
         private WebpageContext db = new WebpageContext();
-        public static List<SelectListItem> m_lxList = new List<SelectListItem>();
 
         // GET: JobOffers
         public ActionResult Index()
@@ -42,7 +42,6 @@ namespace Webpage.Controllers
         // GET: JobOffers/Create
         public ActionResult Create()
         {
-            ViewData["Glenn"] = m_lxList;
             Experinces xExperience = new Experinces();
             List<SelectListItem> xList = new List<SelectListItem>();
             List<Experinces> lxExp = xExperience.GetExperinces();
@@ -51,29 +50,97 @@ namespace Webpage.Controllers
             {
                 xList.Add(new SelectListItem { Text = lxExp[i].Value, Value = lxExp[i].Id.ToString() });
             }
-            m_lxList = xList;
             ViewData["foorBarList"] = xList;
-            ViewData["Glenn"] = m_lxList;
             return View();
+        }
+        [HttpPost]
+        [ValidateAntiForgeryToken]
+        public ActionResult CreateTest()
+        {
+            Qualification xQualification = new Qualification();
+
+            JobOffers xJobOffers = new JobOffers();
+            xJobOffers.Title = Request["Title"];
+            xJobOffers.EndDate = Request["EndDate"].AsDateTime();
+            xJobOffers.PhoneNumber = Request["PhoneNumber"];
+            xJobOffers.AboutTheWork = Request["AboutTheWork"];
+            xJobOffers.Author = Request["Author"];
+            xJobOffers.Visable = Request["Visable"].AsBool();
+
+            Post xPost = new Post();
+
+            xQualification.JobOffersID = db.JobOffers.Add(xJobOffers).JobOffersID;
+
+            //string xList = Request["mySelect"];
+            //string[] sSplit = xList.Split(',');
+
+            //for (int i = 0; i < sSplit.Length; i++)
+            //{
+            //    xPost.Title = sSplit[i];
+            //    db.Posts.Add(xPost);
+            //}
+
+            //foreach (var item in xList)
+            //{
+            //    xPost.Title = item.ToString();
+            //}
+            //var x = new List<string>();
+            //foreach (string item in Request.Form.AllKeys)
+            //{
+            //    if (item.StartsWith("mySelect"))
+            //    {
+            //        x.Add(Request.Form[item]);
+
+            //        for (int i = 0; i < y.Count; i++)
+            //        {
+
+            //        }
+            //        xPost.Title = Request.Form[item];
+            //        db.Posts.Add(xPost);
+            //    }
+            //}
+
+            //foreach (var item in sName)
+            //{
+
+            //    xPost.Title = item;
+            //    db.Posts.Add(xPost);
+            //}
+            List<string> x = ViewData["ListOfThings"] as List<string>;
+
+            for (int i = 0; i < x.Count; i++)
+            {
+                xPost.Title = x[i];
+                db.Posts.Add(xPost);
+            }
+            //xPost.Title = sName;
+            //db.Posts.Add(xPost);
+
+            xQualification.ExperienceID = 1;
+
+            db.Qualifications.Add(xQualification);
+
+            db.SaveChanges();
+            return RedirectToAction("Index");
         }
 
 
         // POST: JobOffers/Create
         // To protect from overposting attacks, please enable the specific properties you want to bind to, for 
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
-        [HttpPost]
-        [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "JobOffersID,Title,AboutTheWork,EndDate,PhoneNumber,Email,Visable,Author")] JobOffers jobOffers)
-        {
-            if (ModelState.IsValid)
-            {
-                db.JobOffers.Add(jobOffers);
-                db.SaveChanges();
-                return RedirectToAction("Index");
-            }
+        //[HttpPost]
+        //[ValidateAntiForgeryToken]
+        //public ActionResult Create([Bind(Include = "JobOffersID,Title,AboutTheWork,EndDate,PhoneNumber,Email,Visable,Author")] JobOffers jobOffers)
+        //{
+        //    if (ModelState.IsValid)
+        //    {
+        //        db.JobOffers.Add(jobOffers);
+        //        db.SaveChanges();
+        //        return RedirectToAction("Index");
+        //    }
 
-            return View(jobOffers);
-        }
+        //    return View(jobOffers);
+        //}
 
         // GET: JobOffers/Edit/5
         public ActionResult Edit(int? id)
@@ -142,7 +209,7 @@ namespace Webpage.Controllers
         }
         public object AddToList()
         {
-            
+
             return "";
         }
     }

@@ -39,48 +39,46 @@
         <article class="row col-md-6">
             @if (item.ImagePath != null || item.ImagePath == "")
                 {
-
                     string temp = "~/images/Contact/" + item.ImagePath;
-                <img src="@Url.Content(temp)" alt="Alternate Text" />
-
+                    <img src="@Url.Content(temp)" alt="Alternate Text" />
             }
             <p>@item.Name</p>
             <p>@item.Posistion</p>
             <p>@item.Phone</p>
             <p>@item.Email</p>
-
             @Html.ActionLink("Delete", "Delete", new { iId = item.ContactId })
-            <button onclick="PopUp('@item.Name','@item.Posistion','@item.Phone','@item.Email')"> Edit</button>
-            <div id="myDiv" class="modal">
-
-                <!-- Modal content -->
-                <div class="modal-content">
-                    @using (Html.BeginForm("Edit", "Contact"))
-                    { 
-                        <span class="close">&times;</span>
-                        <p id="StartEdit"></p><br />
-                        <input type="text" value="" id="sName" /><br />
-                        <input type="text" value="" id="Posistion" /><br />
-                        <input type="text" value="" id="Phone" /><br />
-                        <input type="text" value="" id="Email" /><br />
-                        <button onclick="Close()">Close</button>
-                        <input type="submit" onclick="Save()" value="Save" />
-                    }
-                 
-                </div>
-               
-            </div>
-            <button id="Add" onclick="Save()">Save</button>
+            <button onclick="PopUp('@item.Name','@item.Posistion','@item.Phone','@item.Email','@item.ContactId')"> Edit</button>
+           
         </article>
-       
+    }
+
+</section>
+<section>
+    @using (Html.BeginForm("Edit", "Contact"))
+            {
+        <div id="myDiv" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="StartEdit"></p><br />
+                @Html.TextBox("NumberForID","", new { style = "display: none;" })<br />
+                @Html.TextBox("sName")<br />
+                @Html.TextBox("Posistion")<br />
+                @Html.TextBox("Phone")<br />
+                @Html.TextBox("Email")<br />
+
+                <input type="button" onclick="Close()" value="Close"><br />
+                <input type="submit" onclick="" value="Save" />
+            </div>
+
+        </div>
     }
 </section>
-
 <script type="text/javascript">
-    function PopUp(name, posistion, phone, email) {
+    function PopUp(name, posistion, phone, email,parameter) {
         var modal = document.getElementById('myDiv');
         modal.style.display = "block";
 
+        document.getElementById("NumberForID").value = parameter;
         document.getElementById("StartEdit").innerHTML = "Edit " + name;
         document.getElementById("sName").value = name;
         document.getElementById("Posistion").value = posistion;
@@ -91,17 +89,7 @@
         var modal = document.getElementById('myDiv');
         modal.style.display = "none";
     }
-    function Save() {
-        
-        var sName = document.getElementById("sName").value
-        var sPosistion = document.getElementById("Posistion").value
-        var sPhone = document.getElementById("Phone").value
-        var sEmail = document.getElementById("Email").value
-
-         @*@Url.Action("Edit", "Contact");*@
-        var model = document.getElementById('myDiv');
-        model.style.display = "none"
-    }
+   
 
 </script>
 

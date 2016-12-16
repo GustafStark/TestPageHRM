@@ -43,7 +43,7 @@ namespace Webpage.Concrete
     {
         private WebpageContext db = new WebpageContext();
         public int Id { get; }
-        public string Value { get; }
+        public string Value { get; set; }
         public Experinces()
         {
 

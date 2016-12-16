@@ -372,7 +372,12 @@
     <Content Include="Views\OwnerPage\EditOurWork.cshtml" />
     <Content Include="Views\OwnerPage\EditContact.cshtml" />
     <Content Include="Views\OwnerPage\EditAccounts.cshtml" />
-    <Content Include="Views\Contact\Edit.cshtml" />
+    <Content Include="Views\OwnerPage\EditDepartment\Education.cshtml" />
+    <Content Include="Views\OwnerPage\EditDepartment\SoftwareAndElectonics.cshtml" />
+    <Content Include="Views\OwnerPage\EditDepartment\EnviormentQuality.cshtml" />
+    <Content Include="Views\OwnerPage\EditDepartment\HybridAndEletricCars.cshtml" />
+    <Content Include="Views\OwnerPage\EditDepartment\Mecanic.cshtml" />
+    <Content Include="Views\OwnerPage\EditDepartment\SoundAndEnviorment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -58,31 +58,35 @@ namespace Webpage.Controllers
         }
         public ActionResult EditEducation()
         {
-            return View();
+            return View("~/Views/OwnerPage/EditDepartment/Education.cshtml");
         }
         public ActionResult EditSoftware()
         {
-            return View();
+            return View("~/Views/OwnerPage/EditDepartment/SoftwareAndElectonics.cshtml");
         }
-        public ActionResult EditEnviormentQueality()
+        public ActionResult EditEnviormentQuality()
         {
-            return View();
+            return View("~/Views/OwnerPage/EditDepartment/EnviormentQuality.cshtml");
         }
-        public ActionResult EditHybirdAndEleticCars()
-        {     
-            return View();
+        public ActionResult EditEletricCars()
+        {
+            return View("~/Views/OwnerPage/EditDepartment/HybridAndEletricCars.cshtml");
         }
         public ActionResult EditMekanik()
         {
-            return View();
+            return View("~/Views/OwnerPage/EditDepartment/Mecanic.cshtml");
         }
         public ActionResult EditSoundAndEnviorment()
         {
-            return View();
+            return View("~/Views/OwnerPage/EditDepartment/SoundAndEnviorment.cshtml");
         }
         public ActionResult EditAccounts()
         {
             return View();
+        }
+        public ActionResult CreateNewPage()
+        {
+            return View("EditStart");
         }
 
         public ActionResult Update(string sName)
