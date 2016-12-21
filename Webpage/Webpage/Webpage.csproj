@@ -167,16 +167,48 @@
     <Compile Include="App_Start\IdentityConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
     <Compile Include="App_Start\Startup.Auth.cs" />
+    <Compile Include="Concrete\Advertisement.cs" />
+    <Compile Include="Concrete\DBResoruceProvider.cs" />
     <Compile Include="Controllers\AccountController.cs" />
     <Compile Include="Controllers\DepartementController.cs" />
+    <Compile Include="Controllers\ExperienceController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\JobOffersController.cs" />
+    <Compile Include="Controllers\LanguageController.cs" />
+    <Compile Include="Controllers\OwnerPageController.cs" />
     <Compile Include="Controllers\PostsController.cs" />
-    <Compile Include="Migrations\201611041317093_FirstTry.cs" />
-    <Compile Include="Migrations\201611041317093_FirstTry.Designer.cs">
-      <DependentUpon>201611041317093_FirstTry.cs</DependentUpon>
+    <Compile Include="Interface\IResourceProvider.cs" />
+    <Compile Include="Migrations\201611241422352_goo.cs" />
+    <Compile Include="Migrations\201611241422352_goo.Designer.cs">
+      <DependentUpon>201611241422352_goo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201611241432517_goo1.cs" />
+    <Compile Include="Migrations\201611241432517_goo1.Designer.cs">
+      <DependentUpon>201611241432517_goo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612071220296_boo.cs" />
+    <Compile Include="Migrations\201612071220296_boo.Designer.cs">
+      <DependentUpon>201612071220296_boo.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612071221327_boo1.cs" />
+    <Compile Include="Migrations\201612071221327_boo1.Designer.cs">
+      <DependentUpon>201612071221327_boo1.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612071223042_boo2.cs" />
+    <Compile Include="Migrations\201612071223042_boo2.Designer.cs">
+      <DependentUpon>201612071223042_boo2.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612091233559_AddedPage.cs" />
+    <Compile Include="Migrations\201612091233559_AddedPage.Designer.cs">
+      <DependentUpon>201612091233559_AddedPage.cs</DependentUpon>
+    </Compile>
+    <Compile Include="Migrations\201612120958230_boo3.cs" />
+    <Compile Include="Migrations\201612120958230_boo3.Designer.cs">
+      <DependentUpon>201612120958230_boo3.cs</DependentUpon>
     </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Contact.cs" />
+    <Compile Include="Controllers\ContactController.cs" />
     <Compile Include="Models\JobOffers.cs" />
     <Compile Include="Controllers\ManageController.cs" />
     <Compile Include="Models\Post.cs" />
@@ -187,9 +219,27 @@
     <Compile Include="Models\IdentityModels.cs" />
     <Compile Include="Models\ImageModel.cs" />
     <Compile Include="Models\ManageViewModels.cs" />
+    <Compile Include="Models\Resource.cs" />
     <Compile Include="Models\WebpageContext.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Properties\Settings.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTimeSharedInput>True</DesignTimeSharedInput>
+      <DependentUpon>Settings.settings</DependentUpon>
+    </Compile>
+    <Compile Include="Resources\HomeText.sv.Designer.cs">
+      <DependentUpon>HomeText.sv.resx</DependentUpon>
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+    </Compile>
+    <Compile Include="Resources\HomeText.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>HomeText.resx</DependentUpon>
+    </Compile>
+    <Compile Include="Settings.cs" />
     <Compile Include="Startup.cs" />
+    <Compile Include="ViewModel\JobbViewModel.cs" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Content\bootstrap.css" />
@@ -198,6 +248,9 @@
     <Content Include="fonts\glyphicons-halflings-regular.svg" />
     <Content Include="Global.asax" />
     <Content Include="Content\Site.css" />
+    <Content Include="images\Contact\_hrm-contact_eng.jpg" />
+    <Content Include="images\Flags\147742353398194.jpg" />
+    <Content Include="images\Flags\English.jpg" />
     <Content Include="images\Ourwork\cartech.jpg" />
     <Content Include="images\Ourwork\car_photo_532210.jpg" />
     <Content Include="images\Ourwork\iStock_000016593653Large.jpg" />
@@ -233,6 +286,10 @@
     <Content Include="Scripts\bootstrap.min.js" />
     <None Include="Properties\PublishProfiles\Gustaf - FTP.pubxml" />
     <None Include="Properties\PublishProfiles\Gustaf - Web Deploy.pubxml" />
+    <None Include="Properties\Settings.settings">
+      <Generator>PublicSettingsSingleFileGenerator</Generator>
+      <LastGenOutput>Settings.Designer.cs</LastGenOutput>
+    </None>
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -245,6 +302,11 @@
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
     <Content Include="Scripts\_references.js" />
+    <Content Include="images\Contact\26012015_sandra_kontakt.jpg" />
+    <Content Include="images\Contact\ann-charlotte-ryden-kontakt.jpg" />
+    <Content Include="images\Contact\cecilia-kontakt.jpg" />
+    <Content Include="images\Contact\jorgen-tornquist-kontakt.jpg" />
+    <Content Include="images\Contact\mats-rogbrandt-kontakt.jpg" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -287,11 +349,6 @@
     <Content Include="Views\Posts\Details.cshtml" />
     <Content Include="Views\Posts\Edit.cshtml" />
     <Content Include="Views\Posts\Index.cshtml" />
-    <Content Include="Views\JobOffers\Create.cshtml" />
-    <Content Include="Views\JobOffers\Delete.cshtml" />
-    <Content Include="Views\JobOffers\Details.cshtml" />
-    <Content Include="Views\JobOffers\Edit.cshtml" />
-    <Content Include="Views\JobOffers\Index.cshtml" />
     <Content Include="Views\Departement\Mekanik.cshtml" />
     <Content Include="Views\Departement\ElekMjuk.cshtml" />
     <Content Include="Views\Departement\HybridElec.cshtml" />
@@ -299,6 +356,28 @@
     <Content Include="Views\Departement\Education.cshtml" />
     <Content Include="Views\Departement\SoundAndEnviorment.cshtml" />
     <Content Include="Views\Departement\Index.cshtml" />
+    <Content Include="Views\OwnerPage\Language\Index.cshtml" />
+    <Content Include="Views\Experience\Index.cshtml" />
+    <Content Include="Views\JobOffers\Create.cshtml" />
+    <Content Include="Views\JobOffers\Delete.cshtml" />
+    <Content Include="Views\JobOffers\Details.cshtml" />
+    <Content Include="Views\JobOffers\Edit.cshtml" />
+    <Content Include="Views\JobOffers\Index.cshtml" />
+    <Content Include="Views\Contact\Index.cshtml" />
+    <Content Include="Views\OwnerPage\EditPage.cshtml" />
+    <Content Include="Views\OwnerPage\EditStart.cshtml" />
+    <Content Include="Views\OwnerPage\EditAbout.cshtml" />
+    <Content Include="Views\OwnerPage\EditExpertise.cshtml" />
+    <Content Include="Views\OwnerPage\EditCareer.cshtml" />
+    <Content Include="Views\OwnerPage\EditOurWork.cshtml" />
+    <Content Include="Views\OwnerPage\EditContact.cshtml" />
+    <Content Include="Views\OwnerPage\EditAccounts.cshtml" />
+    <Content Include="Views\OwnerPage\EditDepartment\Education.cshtml" />
+    <Content Include="Views\OwnerPage\EditDepartment\SoftwareAndElectonics.cshtml" />
+    <Content Include="Views\OwnerPage\EditDepartment\EnviormentQuality.cshtml" />
+    <Content Include="Views\OwnerPage\EditDepartment\HybridAndEletricCars.cshtml" />
+    <Content Include="Views\OwnerPage\EditDepartment\Mecanic.cshtml" />
+    <Content Include="Views\OwnerPage\EditDepartment\SoundAndEnviorment.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -312,8 +391,34 @@
     <Content Include="Scripts\jquery-1.10.2.min.map" />
   </ItemGroup>
   <ItemGroup>
-    <EmbeddedResource Include="Migrations\201611041317093_FirstTry.resx">
-      <DependentUpon>201611041317093_FirstTry.cs</DependentUpon>
+    <EmbeddedResource Include="Migrations\201611241422352_goo.resx">
+      <DependentUpon>201611241422352_goo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201611241432517_goo1.resx">
+      <DependentUpon>201611241432517_goo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612071220296_boo.resx">
+      <DependentUpon>201612071220296_boo.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612071221327_boo1.resx">
+      <DependentUpon>201612071221327_boo1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612071223042_boo2.resx">
+      <DependentUpon>201612071223042_boo2.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612091233559_AddedPage.resx">
+      <DependentUpon>201612091233559_AddedPage.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201612120958230_boo3.resx">
+      <DependentUpon>201612120958230_boo3.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomeText.sv.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomeText.sv.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Resources\HomeText.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>HomeText.Designer.cs</LastGenOutput>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

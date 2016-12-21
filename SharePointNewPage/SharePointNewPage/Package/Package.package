@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<package dslVersion="1.0.0.0" 
+        Id="d7791e51-73d6-4a18-812c-f009888321ba" 
+        solutionId="d7791e51-73d6-4a18-812c-f009888321ba" 
+        xmlns="http://schemas.microsoft.com/VisualStudio/2008/SharePointTools/PackageModel" 
+        name="SharePointNewPage"
+        sharePointProductVersion="16.0">
+  <features>
+        <featureReference itemId="1b5f01fe-2f95-43db-a61a-244e93e5a4c6" />
+  </features>
+</package>

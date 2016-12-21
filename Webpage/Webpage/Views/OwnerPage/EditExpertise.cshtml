@@ -1,0 +1,12 @@
+﻿@using (Html.BeginForm("Update", "OwnerPage", new { sName = "Expertise" }))
+{
+    List<Webpage.Models.Resource> lxResoruces = ViewBag.GetPage;
+
+    foreach (var item in lxResoruces)
+    {
+        @Html.TextArea(item.Name + item.Culture, item.Value, new { @class = "" })
+    }
+    <input type="submit" name="" id="submit" class="button" value="Update" />
+}
+
+

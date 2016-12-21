@@ -18,37 +18,68 @@
                     <span class="icon-bar"></span>
                 </button>
 
-                <a href="@Url.Action("Index","Home/Index")">
-                    <img src="~/images/Logo.gif" />
+                <a href="@Url.Action("Index", "Home/Index")">
+                    <img src="~/images/Logo.gif" style="height:50px;" />
                 </a>
                 @*@Html.ActionLink("[replacetext]", "Index", "Home").ToHtmlString().Replace("[replacetext]", "<img src=~/images/Logo.gif/>");*@
                 @*@Html.ActionLink("Application name", "Index", "Home", new { area = "" }, new { @class = "navbar-brand" })*@
 
             </div>
 
+
             <div class="navbar-collapse collapse">
                 <ul class="nav navbar-nav">
                     @*<li>@Html.ActionLink("Home", "Index", "Home",null,new { @style="font-size:16px;" })</li>*@
-                    <li>@Html.ActionLink("About", "About", "Home", null, new { @style = "font-size:16px;" })</li>
+                    <li>@Html.ActionLink(Webpage.Resources.HomeText.About, "About", "Home", null, new { @style = "font-size:16px;font-family:Bebas Neue,Tahoma,Verdana,sans-serif;" })</li>
 
-                    <li>@Html.ActionLink("Expertise", "Expertise", "Home", null, new { @style = "font-size:16px;" })</li>
-                    <li>@Html.ActionLink("Career", "Career", "Home", null, new { @style = "font-size:16px;" })</li>
-                    <li>@Html.ActionLink("Ourwork", "Ourwork", "Home", null, new { @style = "font-size:16px;" })</li>
-                    <li>@Html.ActionLink("Contact", "Contact", "Home", null, new { @style = "font-size:16px;" })</li>
+                    <li>@Html.ActionLink(Webpage.Resources.HomeText.Expertise, "Expertise", "Home", null, new { @style = "font-size:16px;font-family:Bebas Neue,Tahoma,Verdana,sans-serif;" })</li>
+                    <li>@Html.ActionLink(Webpage.Resources.HomeText.Career, "Career", "Home", null, new { @style = "font-size:16px;font-family:Bebas Neue,Tahoma,Verdana,sans-serif;" })</li>
+                    <li>@Html.ActionLink(Webpage.Resources.HomeText.Ourwork, "Ourwork", "Home", null, new { @style = "font-size:16px;font-family:Bebas Neue,Tahoma,Verdana,sans-serif;" })</li>
+                    <li>@Html.ActionLink(Webpage.Resources.HomeText.Contact, "Contact", "Home", null, new { @style = "font-size:16px;font-family:Bebas Neue,Tahoma,Verdana,sans-serif;" })</li>
+                    <li>@Html.ActionLink("EDIT","EditPage","OwnerPage")</li>
+                    @*             <li>@Html.ActionLink(Webpage.Resources.HomeText.Language, "Index", "Language", null, new { @style = "font-size:16px;font-family:Bebas Neue,Tahoma,Verdana,sans-serif;", @class = "mylink" })</li>*@
+                    <li>
+                        <div class="dropdown">
+                            @*<a href="@Url.Action("Index", "Language")">*@
+                                @{
+                                    if (Request.Cookies["Language"] != null)
+                                    {
+                                        var value = Request.Cookies["Language"].Value;
+                                        if (value == "en")
+                                        {
+                                            <img style="height:25px; margin-top:10px;margin-left:10px;" src="@Url.Content("~/images/Flags/english.jpg")" />
+                                        }
+                                        else
+                                        {
+                                            <img style="height:25px;margin-top:10px;margin-left:10px;" src="@Url.Content("~/images/Flags/147742353398194.jpg")" />
+                                        }
+                                    }
+                                    else
+                                    {
+                                        <img style="height:25px;margin-top:10px;margin-left:5px;" src="@Url.Content("~/images/Flags/147742353398194.jpg")" />
+                                    }
+                                }
+                                <div class="dropdown-content">
+                                    @Html.ActionLink("English", "Change", "Language", new { LanguageAbbrevation = "en" }, new { @style = "font-size:16px;font-family:Bebas Neue,Tahoma,Verdana,sans-serif;" })
+                                    @Html.ActionLink("Swedish", "Change", "Language", new { LanguageAbbrevation = "sv" }, new { @style = "font-size:16px;font-family:Bebas Neue,Tahoma,Verdana,sans-serif;" })
+                                </div>
+                           @* </a>*@
+                        </div>
+                    </li>
                     @if (Context.User.Identity.IsAuthenticated)
                     {
                         <li class="dropdown">
                             <a class="dropdown-toggle" id="dropdownMenu1" data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
-                                <p style="font-size:16px">Administratör</p>
+                                <p style="font-size:16px;font-family:Bebas Neue,Tahoma,Verdana,sans-serif;">Administratör</p>
                                 <span class="caret"></span>
                             </a>
-                          
+
                             <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
-                                <li>@Html.ActionLink("Skapa Post", "Index", "Posts")</li>
-                                <li>@Html.ActionLink("Skapa annons", "Index", "JobOffers")</li>
-                                
-                              <li role="separator" class="divider"></li>
-                                <li>@Html.ActionLink("Register", "Register", "Account", null, new { @style = "font-size:16px;" })</li>
+                                <li>@Html.ActionLink("Redigera Post", "Index","Posts", null, new { @style = "font-size:16px;font-family:Bebas Neue,Tahoma,Verdana,sans-serif;" })</li>
+                                <li>@Html.ActionLink("Redigera annons", "Index","JobOffers", null, new { @style = "font-size:16px;font-family:Bebas Neue,Tahoma,Verdana,sans-serif;" })</li>
+
+                                <li role="separator" class="divider"></li>
+                                <li>@Html.ActionLink("Register", "Register", "Account", null, new { @style = "font-size:16px;font-family:Bebas Neue,Tahoma,Verdana,sans-serif;" })</li>
                             </ul>
                         </li>
                     }

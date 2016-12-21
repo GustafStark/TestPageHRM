@@ -1,67 +1,132 @@
 ﻿@model Webpage.Controllers.JobOffers
 
 @{
-    ViewBag.Title = "Create";
+
+    Layout = "~/Views/Shared/_Layout.cshtml";
 }
 
-<h2>Create</h2>
+@{
+    using (Html.BeginForm("CreateTest", "JobOffers"))
+    {
+        
+        @Html.AntiForgeryToken()
 
-@using (Html.BeginForm()) 
-{
-    @Html.AntiForgeryToken()
-    
-    <div class="form-horizontal">
-        <h4>JobOffers</h4>
-        <hr />
-        @Html.ValidationSummary(true, "", new { @class = "text-danger" })
-        <div class="form-group">
-            @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Title, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Title, "", new { @class = "text-danger" })
+        <div class="form-horizontal">
+            <h4>JobOffers</h4>
+            <hr />
+            @Html.ValidationSummary(true, "", new { @class = "text-danger" })
+            <div class="form-group">
+                @Html.LabelFor(model => model.Title, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBox("Title", null);
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.AboutTheWork, htmlAttributes: new { @class = "control-label col-md-2" }) <br />
+                <div class="col-md-10">
+                    @Html.TextArea("AboutTheWork");
+                </div>
+            </div>
+            <div>
+                @Html.DropDownList("foorBar", ViewData["foorBarList"] as List<SelectListItem>, "----SelectOne----")
+            </div>
+            <div>
+                @Html.TextBox("StringValue");
+                <input type="button" onclick="AddToList()" value="Text" />
+            </div>
+            <div>
+                @{
+//List<SelectListItem> Test = new List<SelectListItem>();
+                    @*@Html.listasd
+                        @Html.ListBox("mySelect", Test);*@
+                List<string> lsNames = new List<string>();
+                lsNames.Add("Hej");
+                lsNames.Add("HEjsan");
+                ViewData["ListOfThings"] = lsNames;
+                }
+
+                <table id="TestTable"></table>
+            </div>
+            <div class="form-group">
+                @Html.LabelFor(model => model.EndDate, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBox("EndDate", null);
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.PhoneNumber, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBox("PhoneNumber", null);
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBox("Email", null);
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Visable, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    <div class="checkbox">
+                        @Html.CheckBox("Visable");
+                        @*@Html.EditorFor(model => model.Visable)
+                            @Html.ValidationMessageFor(model => model.Visable, "", new { @class = "text-danger" })*@
+                    </div>
+                </div>
+            </div>
+
+            <div class="form-group">
+                @Html.LabelFor(model => model.Author, htmlAttributes: new { @class = "control-label col-md-2" })
+                <div class="col-md-10">
+                    @Html.TextBox("Author", null);
+                </div>
+            </div>
+
+            <div class="form-group">
+                <div class="col-md-offset-2 col-md-10">
+                    <input type="submit" value="Create" class="btn btn-default" />
+                </div>
             </div>
         </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.AboutTheWork, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.AboutTheWork, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.AboutTheWork, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Qualifications, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Qualifications, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Qualifications, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Email, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Email, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Email, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            @Html.LabelFor(model => model.Author, htmlAttributes: new { @class = "control-label col-md-2" })
-            <div class="col-md-10">
-                @Html.EditorFor(model => model.Author, new { htmlAttributes = new { @class = "form-control" } })
-                @Html.ValidationMessageFor(model => model.Author, "", new { @class = "text-danger" })
-            </div>
-        </div>
-
-        <div class="form-group">
-            <div class="col-md-offset-2 col-md-10">
-                <input type="submit" value="Create" class="btn btn-default" />
-            </div>
-        </div>
-    </div>
+     
+                    }
 }
 
 <div>
     @Html.ActionLink("Back to List", "Index")
 </div>
+<script>
+    function AddToList() {
+
+        var option = document.createElement("option");
+        var DropDownList = document.getElementById("foorBar");
+
+        if (document.getElementById("StringValue").value != "") {
+            Add(document.getElementById("StringValue").value);
+            Reset();
+            return true;
+        }
+        if (DropDownList.options[DropDownList.selectedIndex].value != 0) {
+            Add(DropDownList.options[DropDownList.selectedIndex].text);
+            Reset();
+            return true;
+        }
+        return false;
+
+    }
+    function Reset() {
+        document.getElementById("StringValue").value = "";
+        document.getElementById("foorBar").selectedIndex = 0;
+    }
+    function Add(value) {
+        var table = document.getElementById("TestTable");
+        var row = table.insertRow(0);
+        var cell = row.insertCell(0);
+        cell.innerHTML = value;
+    }
+</script>

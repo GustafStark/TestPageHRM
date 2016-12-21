@@ -1,24 +1,15 @@
-﻿@model Webpage.Models.ImageModel
-
+﻿
 @{
     ViewBag.Title = "Ourwork";
 }
-
-<div style="top:50px;">
-    @{
-        List<string> lxListOfItems = new List<string>();
-        foreach (var item in Model.m_lsImages)
-        {
-            lxListOfItems.Add(item);
-            @*<img class="full-image" src="@Url.Content(item)" alt="Alternate Text" />*@
-        }
-        <img class="full-image" src="@Url.Content(lxListOfItems[0])" alt="Alternate Text" />
-        @*<h5 class="Our-Work-Headline">
-                We help your company develop<br />
-                We work hard for you and your project
-            </h5>*@
-    }
-</div>
+<section class="row">
+    <div class="img-container">
+        <img class="img-responsive" src="~/images/SlideShow/development.jpg" />
+        <h7 class="homeImageLink">
+            <span>We help your company develop</span>
+        </h7>
+    </div>
+</section>
 <div class="info-tiles">
     <div class="info-tile-row">
         <div class="info-tile" style="background-color:white;">
@@ -39,8 +30,6 @@
 
                 <img class="tile-img-dt" src="~/images/Ourwork/myfordtouch-sg.jpg" />
                 <img class="tile-img-mb" src="~/images/Ourwork/myfordtouch-sg.jpg" />
-                @*<img class="tile-img-dt" src="~/images/Ourwork/wallpaper-widescreen-car-tech-197362.jpg" />
-                    <img class="tile-img-mb" src="~/images/Ourwork/wallpaper-widescreen-car-tech-197362.jpg" />*@
 
                 <div class="info-tile-info">
                     <div class="info-tile-info-inner">

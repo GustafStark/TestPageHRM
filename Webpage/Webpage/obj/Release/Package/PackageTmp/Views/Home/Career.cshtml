@@ -2,14 +2,16 @@
     ViewBag.Title = "Career";
 }
 
-
-
 <section class="row">
-    <img class="full-image" style="height:100vh;" src="~/images/photo-1449247709967-d4461a6a6103.jpg" />
-    <article class="title-career" >
-        <h4>We are expanding and looking for new colleagues and friends. </h4>
-    </article>
+    <div class="img-container">
+        <img class="img-responsive" src="~/images/photo-1449247709967-d4461a6a6103.jpg" />
+        <h7 class="homeImageLink">
+            <span >We are expanding and looking for new colleagues and friends.</span>
+        </h7>
+    </div>
 </section>
+
+
 <section class="margin-top-5 margin-bot-5">
     @for (int i = 0; i < 6; i++)
     {
@@ -21,8 +23,12 @@
         </article>
     }
 </section>
-
-<section class="row margin-top-5">
-
-    <img class="full-image" src="~/images/photo-1450542814732-e210d1b7b938.jpg" />
+<section class="row">
+    <div class="img-container">
+        <img class="img-responsive" src="~/images/photo-1450542814732-e210d1b7b938.jpg" />
+        <h7 class="homeImageLink">
+            <span>Are you the one we are looing for</span>
+        </h7>
+    </div>
 </section>
+

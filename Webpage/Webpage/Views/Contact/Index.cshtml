@@ -1,0 +1,95 @@
+﻿@model IEnumerable<Webpage.Models.Contact>
+
+@{
+    ViewBag.Title = "Index";
+}
+@using (Html.BeginForm(null, null, FormMethod.Post, new { enctype = "multipart/form-data" }))
+{
+    <table>
+        <tr>
+            <td>File:</td>
+            <td><input type="file" name="File" id="File" /></td>
+        </tr>
+        <tr>
+            <td>Name</td>
+            <td><input type="text" name="Name" id="Name" /></td>
+        </tr>
+        <tr>
+            <td>Posistion</td>
+            <td><input type="text" name="Posistion" id="Name" /></td>
+        </tr>
+        <tr>
+            <td>Phone</td>
+            <td><input type="text" name="Phone" id="Name" /></td>
+        </tr>
+        <tr>
+            <td>Email</td>
+            <td><input type="text" name="Email" id="Name" /></td>
+        </tr>
+        <tr>
+            <td>&nbsp;</td>
+            <td><input type="submit" name="submit" value="Upload" /></td>
+        </tr>
+    </table>
+}
+
+<section class="row">
+    @foreach (var item in Model)
+    {
+        <article class="row col-md-6">
+            @if (item.ImagePath != null || item.ImagePath == "")
+                {
+                    string temp = "~/images/Contact/" + item.ImagePath;
+                    <img src="@Url.Content(temp)" alt="Alternate Text" />
+            }
+            <p>@item.Name</p>
+            <p>@item.Posistion</p>
+            <p>@item.Phone</p>
+            <p>@item.Email</p>
+            @Html.ActionLink("Delete", "Delete", new { iId = item.ContactId })
+            <button onclick="PopUp('@item.Name','@item.Posistion','@item.Phone','@item.Email','@item.ContactId')"> Edit</button>
+           
+        </article>
+    }
+
+</section>
+<section>
+    @using (Html.BeginForm("Edit", "Contact"))
+            {
+        <div id="myDiv" class="modal">
+            <div class="modal-content">
+                <span class="close">&times;</span>
+                <p id="StartEdit"></p><br />
+                @Html.TextBox("NumberForID","", new { style = "display: none;" })<br />
+                @Html.TextBox("sName")<br />
+                @Html.TextBox("Posistion")<br />
+                @Html.TextBox("Phone")<br />
+                @Html.TextBox("Email")<br />
+
+                <input type="button" onclick="Close()" value="Close"><br />
+                <input type="submit" onclick="" value="Save" />
+            </div>
+
+        </div>
+    }
+</section>
+<script type="text/javascript">
+    function PopUp(name, posistion, phone, email,parameter) {
+        var modal = document.getElementById('myDiv');
+        modal.style.display = "block";
+
+        document.getElementById("NumberForID").value = parameter;
+        document.getElementById("StartEdit").innerHTML = "Edit " + name;
+        document.getElementById("sName").value = name;
+        document.getElementById("Posistion").value = posistion;
+        document.getElementById("Phone").value = phone;
+        document.getElementById("Email").value = email;
+    }
+    function Close() {
+        var modal = document.getElementById('myDiv');
+        modal.style.display = "none";
+    }
+   
+
+</script>
+

@@ -18,9 +18,15 @@ namespace Webpage.Models
         public WebpageContext() : base("name=WebpageContext")
         {
         }
+        public DbSet<Webpage.Controllers.Experience> Experiences { get; set; }
+        public DbSet<Webpage.Controllers.Post> Posts { get; set; }
 
-        public System.Data.Entity.DbSet<Webpage.Controllers.Post> Posts { get; set; }
+        public DbSet<Webpage.Controllers.JobOffers> JobOffers { get; set; }
+        public DbSet<Controllers.Qualification> Qualifications { get; set; }
 
-        public System.Data.Entity.DbSet<Webpage.Controllers.JobOffers> JobOffers { get; set; }
+
+
+        public DbSet<Webpage.Models.Contact> Contact { get; set; }
+        public DbSet<Resource> Resources { get; set; }
     }
 }

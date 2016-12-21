@@ -1,0 +1,28 @@
+﻿@model Webpage.ViewModel.JobbViewModel
+
+@foreach (var item in Model.Experience)
+{
+    <p>@item.Qualifications</p>
+    <p>@item.Value</p>
+}
+@*@foreach (var item in Model.JobOffersViewModle)
+{
+    <p>@item.Title</p>
+    <p>@item.AboutTheWork</p>
+    <p>@item.EndDate</p>
+    <p>@item.Email</p>
+    <p>@item.Author</p>
+}*@
+
+@foreach (var item in Model.JobOffersViewModle)
+{
+    <tr>
+        <th>
+            <p>@item.Title</p>
+        </th>
+        <th>
+            <p>@item.EndDate</p>
+        </th>
+    </tr>
+    
+}

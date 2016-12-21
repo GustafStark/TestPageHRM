@@ -117,10 +117,46 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Target" xml:space="preserve">
-    <value>H4sIAAAAAAAEAN1ZS2/jNhC+F+h/EHRqgayVx6UN5F2kTlK4zasrZ/dMSyObWIpURSqwf1sP/Un9Cx1K1IuyHTuOkbTIJRkOv3lwnso/f/3tf1okzHmCTFLBh+7J4Nh1gIcionw2dHMVf/jJ/fTx++/8qyhZOF8qvjPNhze5HLpzpdJzz5PhHBIiBwkNMyFFrAahSDwSCe/0+Phn7+TEA4RwEctx/M85VzSB4g/8cyR4CKnKCbsVETBp6HgSFKjOHUlApiSEofsVpimZwaDkdJ0LRglqEQCLXYdwLhRRqOP5o4RAZYLPghQJhE2WKSBfTJgEo/t5w76tGcen2gyvuVhBhblUItkR8OTM+MWzr7/Iu27tN/TcFXpYLbXVhfeG7m9ieh/H+IKuY0s7H7FMczbexRdB5zGG7IP64pFjjo/qSMCA0T9HzihnKs9gyCFXGWFHzkM+ZTT8HZYT8Q34kOeMtfVDDfGsQ0DSQyZSyNTyM8S21uNL1/G6AJ6NUN9fdbk0cMzV2anr3KE6ZMqgDoiWMwIlMvgVOGREQfRAlIIM33McQeHSnhqW0AlVDCpxGIKYSa5zSxY3wGdqPnTxV9e5pguIKopR4ZFTTDy8pLIcnpNyMRW5mszhq8i+HVzYH5iZNKZh4R95cHFXCaHs8B7M1VxkryzG95q825iND0KqXRNR33mLHNRyX5J+1b3/V+aNE/Q+6jY/uKQA41NNYKEOLukG++QE5OEFvUHS6QwiFGPKqGDyR5ML1/ZyECcHk4bSSOuaVMIGoPqNtdGjnEgGrTNvM4pOllUIZaFYZW5tWDMueeW8VM1V3prByr8laYqebw1ahuIE5ZQ1+hDsPoIkJYYXyhWTSK1tLQmTHd/BOkXRqOk1zaS6JIpMiX77UZT02KxnXOPcSpj9UnbRa9xe3dC/dwLGTJyDtSCNF6/RsARrVmEj1MpsUKC4HYSEkWzTDDMSLE/4s5PRJjxTJNtIhrQ9Rnf4aEN1T7ZHtCeMNqZ9tj2qGSTaYIa0g62mYnWsNLQ+iu9ZIWAHmteLNKup2qG7VWCXxWOPoC6qzO7xvPraOldW80Dblatni00orxHArR7exmmRt8dqdek2Vou8PVbTh9tQDfU/Gba9fmWz1NLrvmX1J9/0iue/DvSaR8niOuieJxrpxhEspYJkoBkGwZ9sxCja2zDcEk5jdHY5Mru4pJ9aHxnez8LvSRmxbbf+d7B8U+3oZ4f83oaww9TPn0gWzkn2Q0IWP7ahXrpT7wW4em/eC7KzG+9nbWcU3wFqtx33zfbNdx5svTVyL7TeqrgXmr0Ovsc4s9e6/trwKltb2T+GbjQVaEKp6m5L3dqdbhW02QJfuO7126TvtT+1+5cg6ayB0B/eOYS6OjWgFc+Yx6J6SrSorVHFYr30LSgSofcvMkVjEio8DkHKYsX/QlhelK8pRGN+n6s0VxdSQjJlne86vrdZfrHTdnX279Oivr6GCagmRRPgnv+SUxbVel/3i8M6CB2IpuKgVoHSlWe2rJHuBN8SyLjvElLgul5NIEkZgsl7HpAneIlujxJuYEbCZTXtrAd5/iG6bvcvKZllJJEGo7mv/33k6f8fffwX8HBv73EaAAA=</value>
+  <data name="About" xml:space="preserve">
+    <value>About</value>
   </data>
-  <data name="DefaultSchema" xml:space="preserve">
-    <value>dbo</value>
+  <data name="Career" xml:space="preserve">
+    <value>Career</value>
+  </data>
+  <data name="Contact" xml:space="preserve">
+    <value>Contact</value>
+  </data>
+  <data name="Education" xml:space="preserve">
+    <value>Education</value>
+  </data>
+  <data name="Electronicssoftwaredevelopment" xml:space="preserve">
+    <value>Electronics &amp; Software development</value>
+  </data>
+  <data name="EnvironmentQuality" xml:space="preserve">
+    <value>Environment &amp; Quality</value>
+  </data>
+  <data name="Expertise" xml:space="preserve">
+    <value>Expertise</value>
+  </data>
+  <data name="Home" xml:space="preserve">
+    <value>Home</value>
+  </data>
+  <data name="Hybridelectricvehicles" xml:space="preserve">
+    <value>Hybrid &amp; electric vehicles </value>
+  </data>
+  <data name="Language" xml:space="preserve">
+    <value>Language</value>
+  </data>
+  <data name="Mechanics" xml:space="preserve">
+    <value>Mechanics</value>
+  </data>
+  <data name="Ourwork" xml:space="preserve">
+    <value>Ourwork</value>
+  </data>
+  <data name="Soundandvibration" xml:space="preserve">
+    <value>Sound and Vibration</value>
+  </data>
+  <data name="TestText" xml:space="preserve">
+    <value>Now i am in English</value>
   </data>
 </root>

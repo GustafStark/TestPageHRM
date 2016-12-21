@@ -1,0 +1,12 @@
+﻿<?xml version='1.0' encoding='utf-8'?>
+<SettingsFile xmlns="http://schemas.microsoft.com/VisualStudio/2004/01/settings" CurrentProfile="(Default)" GeneratedClassNamespace="Webpage.Properties" GeneratedClassName="Settings">
+  <Profiles />
+  <Settings>
+    <Setting Name="TextTestSetting" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Svenska</Value>
+    </Setting>
+    <Setting Name="TextTestSettingEn" Type="System.String" Scope="Application">
+      <Value Profile="(Default)">Engelska</Value>
+    </Setting>
+  </Settings>
+</SettingsFile>

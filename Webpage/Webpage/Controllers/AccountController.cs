@@ -136,8 +136,8 @@ namespace Webpage.Controllers
 
         //
         // GET: /Account/Register
-        //[AllowAnonymous]
-        [Authorize]
+        [AllowAnonymous]
+        //[Authorize]
         public ActionResult Register()
         {
             return View();
@@ -146,8 +146,8 @@ namespace Webpage.Controllers
         //
         // POST: /Account/Register
         [HttpPost]
-        //[AllowAnonymous]
-        [Authorize]
+        [AllowAnonymous]
+        //[Authorize]
         [ValidateAntiForgeryToken]
         public async Task<ActionResult> Register(RegisterViewModel model)
         {
@@ -176,8 +176,8 @@ namespace Webpage.Controllers
 
         //
         // GET: /Account/ConfirmEmail
-        //[AllowAnonymous]
-        [Authorize]
+        [AllowAnonymous]
+        //[Authorize]
         public async Task<ActionResult> ConfirmEmail(string userId, string code)
         {
             if (userId == null || code == null)

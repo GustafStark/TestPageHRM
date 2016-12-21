@@ -46,7 +46,7 @@ namespace Webpage.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Create([Bind(Include = "PostID,Title,ImagePath,ShortText,LongTest,Author")] Post post)
+        public ActionResult Create([Bind(Include = "PostID,Title,ImagePath,ShortText,LongTest,Author,Visable")] Post post)
         {
             if (ModelState.IsValid)
             {
@@ -78,7 +78,7 @@ namespace Webpage.Controllers
         // more details see http://go.microsoft.com/fwlink/?LinkId=317598.
         [HttpPost]
         [ValidateAntiForgeryToken]
-        public ActionResult Edit([Bind(Include = "PostID,Title,ImagePath,ShortText,LongTest,Author")] Post post)
+        public ActionResult Edit([Bind(Include = "PostID,Title,ImagePath,ShortText,LongTest,Author,Visable")] Post post)
         {
             if (ModelState.IsValid)
             {
