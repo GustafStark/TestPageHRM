@@ -110,3 +110,4 @@ C:\Users\hrmengineering\Documents\GitHub\TestPageHRM\Webpage\Webpage.Tests\bin\D
 C:\Users\hrmengineering\Documents\GitHub\TestPageHRM\Webpage\Webpage.Tests\obj\Debug\Webpage.Tests.csprojResolveAssemblyReference.cache
 C:\Users\hrmengineering\Documents\GitHub\TestPageHRM\Webpage\Webpage.Tests\obj\Debug\Webpage.Tests.dll
 C:\Users\hrmengineering\Documents\GitHub\TestPageHRM\Webpage\Webpage.Tests\obj\Debug\Webpage.Tests.pdb
+C:\Users\hrm30\Documents\Visual Studio 2015\Projects\TestPageHRM\Webpage\Webpage.Tests\bin\Debug\sv\Webpage.resources.dll
